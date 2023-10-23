@@ -1,0 +1,5 @@
+#!/bin/sh
+
+root=
+launchctl unload $root/Library/LaunchDaemons/chaoge.daeman.plist
+
