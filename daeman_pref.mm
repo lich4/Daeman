@@ -20,6 +20,7 @@ static void initPref() {
     }
 }
 static id getPref(NSString* key, id val) {
+    initPref();
     NSDictionary* prefs = [_usrdefs persistentDomainForName:@"chaoge.daeman"];
     if (prefs == nil || prefs[key] == nil) {
         return val;
@@ -27,6 +28,7 @@ static id getPref(NSString* key, id val) {
     return prefs[key];
 }
 static void setPref(NSString* key, id val) {
+    initPref();
     NSDictionary* prefs = [_usrdefs persistentDomainForName:@"chaoge.daeman"];
     NSMutableDictionary* mprefs = [prefs mutableCopy];
     mprefs[key] = val;
