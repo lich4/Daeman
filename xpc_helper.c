@@ -31,6 +31,7 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/syslimits.h>
+#include <sys/types.h>
 
 #include <errno.h>
 #include <inttypes.h>
@@ -44,11 +45,30 @@
 #include <mach/mach.h>
 
 #include <xpc/xpc.h>
-#include "xpc_private.h"
-
-#include "os_alloc_once.h"
 
 #include "launchctl.h"
+
+#define OS_ALLOC_ONCE_KEY_LIBXPC 1
+
+struct xpc_global_data {
+    uint64_t a;
+    uint64_t xpc_flags;
+    mach_port_t task_bootstrap_port; /* 0x10 */
+#ifndef _64
+    uint32_t padding;
+#endif
+    xpc_object_t xpc_bootstrap_pipe; /* 0x18 */
+};
+
+#define OS_ALLOC_ONCE_KEY_MAX 100
+
+struct _os_alloc_once_s {
+    long once;
+    void *ptr;
+};
+
+extern struct _os_alloc_once_s _os_alloc_once_table[];
+
 
 int
 launchctl_send_xpc_to_launchd(uint64_t routine, xpc_object_t msg, xpc_object_t *reply)
@@ -75,53 +95,6 @@ launchctl_send_xpc_to_launchd(uint64_t routine, xpc_object_t msg, xpc_object_t *
 }
 
 void
-launchctl_xpc_object_print(xpc_object_t in, const char *name, int level)
-{
-	for (int i = 0; i < level; i++)
-		putchar('\t');
-
-	if (name != NULL)
-		printf("\"%s\" = ", name);
-
-	xpc_type_t t = xpc_get_type(in);
-	if (t == XPC_TYPE_STRING)
-		printf("\"%s\";\n", xpc_string_get_string_ptr(in));
-	else if (t == XPC_TYPE_INT64)
-		printf("%lld;\n", xpc_int64_get_value(in));
-	else if (t == XPC_TYPE_DOUBLE)
-		printf("%f;\n", xpc_double_get_value(in));
-	else if (t == XPC_TYPE_BOOL) {
-		if (in == XPC_BOOL_TRUE)
-			printf("true;\n");
-		else if (in == XPC_BOOL_FALSE)
-			printf("false;\n");
-	} else if (t == XPC_TYPE_MACH_SEND)
-		printf("mach-port-object;\n");
-	else if (t == XPC_TYPE_FD)
-		printf("file-descriptor-object;\n");
-	else if (t == XPC_TYPE_ARRAY) {
-		printf("(\n");
-		int c = xpc_array_get_count(in);
-		for (int i = 0; i < c; i++) {
-			launchctl_xpc_object_print(xpc_array_get_value(in, i), NULL, level + 1);
-		}
-		for (int i = 0; i < level; i++)
-			putchar('\t');
-		printf(");\n");
-	} else if (t == XPC_TYPE_DICTIONARY) {
-		printf("{\n");
-		int __block blevel = level + 1;
-		(void)xpc_dictionary_apply(in, ^ bool (const char *key, xpc_object_t value) {
-				launchctl_xpc_object_print(value, key, blevel);
-				return true;
-		});
-		for (int i = 0; i < level; i++)
-			putchar('\t');
-		printf("};\n");
-	}
-}
-
-void
 launchctl_setup_xpc_dict(xpc_object_t dict)
 {
 	if (__builtin_available(macOS 12.0, iOS 15.0, tvOS 15.0, watchOS 8.0, *)) {
@@ -131,93 +104,6 @@ launchctl_setup_xpc_dict(xpc_object_t dict)
 	}
 	xpc_dictionary_set_uint64(dict, "handle", 0);
 	return;
-}
-
-bool
-launchctl_test_xpc_send(uint64_t type, uint64_t handle, const char *name)
-{
-	xpc_object_t dict = xpc_dictionary_create(NULL, NULL, 0);
-	xpc_object_t reply = NULL;
-	xpc_dictionary_set_uint64(dict, "type", type);
-	xpc_dictionary_set_uint64(dict, "handle", handle);
-	xpc_dictionary_set_string(dict, "name", name);
-	int err = launchctl_send_xpc_to_launchd(XPC_ROUTINE_UNKNOWN, dict, &reply);
-	return err == 0;
-}
-
-int
-launchctl_setup_xpc_dict_for_service_name(char *servicetarget, xpc_object_t dict, const char **name)
-{
-	long handle = 0;
-
-	if (name != NULL) {
-		*name = NULL;
-	}
-
-	const char *split[3] = {NULL, NULL, NULL};
-	for (int i = 0; i < 3; i++) {
-		char *var = strsep(&servicetarget, "/");
-		if (var == NULL)
-			break;
-		split[i] = var;
-	}
-	if (split[0] == NULL || split[0][0] == '\0')
-		return EBADNAME;
-
-	if (strcmp(split[0], "system") == 0) {
-		xpc_dictionary_set_uint64(dict, "type", 1);
-		xpc_dictionary_set_uint64(dict, "handle", 0);
-		if (split[1] != NULL && split[1][0] != '\0') {
-			xpc_dictionary_set_string(dict, "name", split[1]);
-			if (name != NULL) {
-				*name = split[1];
-			}
-			if (__builtin_available(macOS 13.0, iOS 16.0, tvOS 16.0, watchOS 9.0, *)) {
-				if (xpc_user_sessions_enabled() && launchctl_test_xpc_send(1, handle, split[1]) == false) {
-					uint64_t fguid = xpc_user_sessions_get_foreground_uid(0);
-					if (launchctl_test_xpc_send(2, fguid, split[1])) {
-						fprintf(stderr, "Warning: Please switch to user/foreground/%s service identifier\n", split[1]);
-						xpc_dictionary_set_uint64(dict, "type", 2);
-						xpc_dictionary_set_uint64(dict, "handle", xpc_user_sessions_get_foreground_uid(0));
-					}
-				}
-			}
-		}
-		return 0;
-	} else if (strcmp(split[0], "user") == 0) {
-		xpc_dictionary_set_uint64(dict, "type", 2);
-		if (split[1] != NULL && strcmp(split[1], "foreground") == 0) {
-			if (__builtin_available(macOS 13.0, iOS 16.0, tvOS 16.0, watchOS 9.0, *)) {
-				if (xpc_user_sessions_enabled() == 0) {
-					fprintf(stderr, "user/foreground/ specifier is not supported on this platform\n");
-					return ENOTSUP;
-				}
-				handle = xpc_user_sessions_get_foreground_uid(0);
-			}
-		}
-	} else if (strcmp(split[0], "session") == 0) {
-		xpc_dictionary_set_uint64(dict, "type", 4);
-	} else if (strcmp(split[0], "pid") == 0) {
-		xpc_dictionary_set_uint64(dict, "type", 5);
-	} else {
-		xpc_dictionary_set_uint64(dict, "type", 9);
-	}
-	if (split[1] != NULL) {
-		if (handle == 0) {
-			handle = strtol(split[1], NULL, 10);
-			if (handle == -1)
-				return EUSAGE;
-		}
-		xpc_dictionary_set_uint64(dict, "handle", handle);
-		if (split[2] != NULL && split[2][0] != '\0') {
-			xpc_dictionary_set_string(dict, "name", split[2]);
-			if (name != NULL) {
-				*name = split[2];
-			}
-		}
-		return 0;
-	}
-	return EBADNAME;
 }
 
 xpc_object_t
@@ -252,90 +138,5 @@ launchctl_parse_load_unload(unsigned int domain, int count, char **list)
 	return ret;
 }
 
-vm_address_t
-launchctl_create_shmem(xpc_object_t dict, vm_size_t sz)
-{
-	vm_address_t addr = 0;
-	xpc_object_t shmem;
 
-	vm_allocate(mach_task_self(), &addr, sz, 0xf0000003);
-	shmem = xpc_shmem_create((void*)addr, sz);
-	xpc_dictionary_set_value(dict, "shmem", shmem);
 
-	return addr;
-}
-
-void
-launchctl_print_shmem(xpc_object_t dict, vm_address_t addr, vm_size_t sz, FILE *outfd)
-{
-	uint64_t written;
-
-	written = xpc_dictionary_get_uint64(dict, "bytes-written");
-	if (written <= sz) {
-		if (written == 0) {
-			fwrite("<eof>", 5, 1, outfd);
-		} else {
-			fwrite((void*)addr, 1, written, outfd);
-		}
-		fflush(outfd);
-		return;
-	}
-}
-
-xpc_object_t
-launchctl_xpc_from_plist(const char *path)
-{
-	xpc_object_t plist = NULL;
-	struct stat sb;
-	void *f;
-	int fd;
-
-	if ((fd = open(path, O_RDONLY)) == -1)
-		return NULL;
-
-	if (fstat(fd, &sb) == -1)
-		goto cleanup;
-
-	if ((f = mmap(NULL, sb.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) == MAP_FAILED)
-		goto cleanup;
-
-	plist = xpc_create_from_plist(f, sb.st_size);
-
-	munmap(f, sb.st_size);
-cleanup:
-	close(fd);
-	return plist;
-}
-
-void
-launchctl_print_domain_str(FILE *s, xpc_object_t msg)
-{
-	uint64_t type, handle;
-
-	type = xpc_dictionary_get_uint64(msg, "type");
-	handle = xpc_dictionary_get_uint64(msg, "handle");
-
-	switch (type) {
-		case 1:
-			fprintf(s, "system");
-			break;
-		case 2:
-			fprintf(s, "uid: %"PRIu64, handle);
-			break;
-		case 3:
-			fprintf(s, "login: %"PRIu64, handle);
-			break;
-		case 4:
-			fprintf(s, "asid: %"PRIu64, handle);
-			break;
-		case 5:
-			fprintf(s, "pid: %"PRIu64, handle);
-			break;
-		case 7:
-			fprintf(s, "ports");
-			break;
-		case 8:
-			fprintf(s, "user gui: %"PRIu64, handle);
-			break;
-	}
-}

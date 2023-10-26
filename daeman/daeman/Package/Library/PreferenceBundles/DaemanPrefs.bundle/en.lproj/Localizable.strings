@@ -9,6 +9,11 @@
 "$REFRESH"  = "Refresh";
 "$IMPORT"   = "Import config from file ...";
 "$EXPORT"   = "Export config to file ...";
+"$IMPERR"   = "Import Failed";
+"$EXPERR"   = "Export Failed";
+"$IMPSUC"   = "Import Success";
+"$EXPSUC"   = "Export Success";
+"$NOEXIST"  = "File not exist";
 "$SHOWSYS"  = "Show system daemon";
 "$DAEMONLIST" = "Daemon List";
 "$STATUS"   = "Status";
@@ -17,4 +22,5 @@
 "$UNKNOWN"  = "Unknown";
 "$STOPSYS"  = "It's very dangerous to stop system daemon, proceed?";
 "$STOPKEY"  = "System core service is forbidden to shutdown!";
+"$INPUTNAME" = "Input filename";
 

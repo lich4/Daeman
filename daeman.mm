@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 extern "C" {
-#include "xpc_private.h"
 #include "launchctl.h"
 }
 #include "utils.h"
@@ -41,26 +40,15 @@ static int platformize_me() {
     return ret;
 }
 
-static int stop_cmd(const char* name) {
+static int start_cmd(const char* name, bool start) {
     @autoreleasepool {
         xpc_object_t dict, reply;
         int ret;
         dict = xpc_dictionary_create(nil, nil, 0);
         launchctl_setup_xpc_dict(dict);
         xpc_dictionary_set_string(dict, "name", name);
-        ret = launchctl_send_xpc_to_launchd(XPC_ROUTINE_SERVICE_STOP, dict, &reply);
-        return ret == EALREADY ? 0 : ret;
-    }
-}
-
-static int start_cmd(const char* name) {
-    @autoreleasepool {
-        xpc_object_t dict, reply;
-        int ret;
-        dict = xpc_dictionary_create(nil, nil, 0);
-        launchctl_setup_xpc_dict(dict);
-        xpc_dictionary_set_string(dict, "name", name);
-        ret = launchctl_send_xpc_to_launchd(XPC_ROUTINE_SERVICE_START, dict, &reply);
+        ret = launchctl_send_xpc_to_launchd(start?XPC_ROUTINE_SERVICE_START:XPC_ROUTINE_SERVICE_STOP, dict, &reply);
+        NSLog(@"cloudtweak start_cmd_%d %s->%d", start, name, ret);
         return ret == EALREADY ? 0 : ret;
     }
 }
@@ -99,6 +87,7 @@ static int load_cmd(const char* path, bool load, int flag) {
             });
         }
     }
+    NSLog(@"cloudtweak load_cmd_%d %s->%d", load, path, ret);
     return ret;
 }
 
@@ -269,6 +258,7 @@ static NSArray* list_cmd() {
         [_messagingCenter runServerOnCurrentThread];
         [_messagingCenter registerForMessageName:@"listAll" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
         [_messagingCenter registerForMessageName:@"startOne" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
+        [_messagingCenter registerForMessageName:@"export" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
     }
     return self;
 }
@@ -286,15 +276,22 @@ static NSArray* list_cmd() {
             if (Plist != nil) {
                 load_cmd(Plist.UTF8String, YES, flag.intValue);
             }
-            start_cmd(Label.UTF8String);
+            start_cmd(Label.UTF8String, YES);
         } else {
             if (Plist != nil) {
                 load_cmd(Plist.UTF8String, NO, flag.intValue);
             }
-            stop_cmd(Label.UTF8String);
+            start_cmd(Label.UTF8String, NO);
         }
         return @{
             @"status": @0,
+        };
+    } else if ([name isEqualToString:@"export"]) {
+        NSString* path = userInfo[@"path"];
+        NSDictionary* policy = userInfo[@"data"];
+        BOOL status = [policy writeToFile:path atomically:YES];
+        return @{
+            @"status": @(status?0:-1),
         };
     }
     return nil;

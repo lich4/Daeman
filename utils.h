@@ -3,5 +3,5 @@
 
 NSString* ns_2_json(id nsobj);
 id json_2_ns(NSString* s);
-int alert(NSString* title, NSString* msg, int tmout, void(^on_ok)());
-
+void alert(NSString* title, NSString* msg, int tmout, BOOL canCancel, void(^cb)(BOOL ok));
+void prompt(NSString* title, NSString* msg, NSString* hint, void(^cb)(NSString* text)) ;

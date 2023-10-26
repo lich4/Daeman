@@ -21,18 +21,26 @@ static void initPref() {
 }
 static id getPref(NSString* key, id val) {
     initPref();
-    NSDictionary* prefs = [_usrdefs persistentDomainForName:@"chaoge.daeman"];
-    if (prefs == nil || prefs[key] == nil) {
+    NSDictionary* prefs = [_usrdefs objectForKey:@"chaoge.daeman"];
+    if (prefs == nil) {
+        prefs = @{};
+        [_usrdefs setObject:@{} forKey:@"chaoge.daeman"];
+    }
+    if (prefs[key] == nil) {
         return val;
     }
     return prefs[key];
 }
 static void setPref(NSString* key, id val) {
     initPref();
-    NSDictionary* prefs = [_usrdefs persistentDomainForName:@"chaoge.daeman"];
+    NSDictionary* prefs = [_usrdefs objectForKey:@"chaoge.daeman"];
+    if (prefs == nil) {
+        prefs = @{};
+        [_usrdefs setObject:@{} forKey:@"chaoge.daeman"];
+    }
     NSMutableDictionary* mprefs = [prefs mutableCopy];
     mprefs[key] = val;
-    [_usrdefs setPersistentDomain:mprefs forName:@"chaoge.daeman"];
+    [_usrdefs setObject:mprefs forKey:@"chaoge.daeman"];
 }
 
 static NSString* localize(NSString* key) {
@@ -79,6 +87,18 @@ static NSString* get_desc(NSString* label, BOOL detail) {
     return localize(@"$UNKNOWN");
 }
 
+static NSArray* getAllDaemons() {
+    CPDistributedMessagingCenter* center = get_ipc();
+    if (center == nil) {
+        return nil;
+    }
+    NSDictionary* dic = [center sendMessageAndReceiveReplyName:@"listAll" userInfo:nil];
+    if (dic == nil) {
+        return nil;
+    }
+    return dic[@"data"];
+}
+
 @interface DaemanMultilineCell: PSTableCell
 @end
 
@@ -119,7 +139,7 @@ static NSString* get_desc(NSString* label, BOOL detail) {
     info[@"Label"] = label;
     info[@"isStart"] = @(isStart);
     info[@"flag"] = @(flag);
-    if (_KeepAlive && detail[@"Plist"] != nil) {
+    if (detail[@"Plist"] != nil) {
         info[@"Plist"] = detail[@"Plist"];
     }
     NSDictionary* dic = [center sendMessageAndReceiveReplyName:@"startOne" userInfo:info];
@@ -132,23 +152,43 @@ static NSString* get_desc(NSString* label, BOOL detail) {
 - (id)getAlive:(PSSpecifier*)specifier {
     return @(_Alive);
 }
+- (void)updateCell {
+    NSDictionary* detail = [self.specifier propertyForKey:@"detail"];
+    NSString* cur_label = detail[@"Label"];
+    NSArray* items = getAllDaemons();
+    for (NSDictionary* item in items) {
+        NSString* label = item[@"Label"];
+        if ([label isEqualToString:cur_label]) {
+            [self.specifier setProperty:item forKey:@"detail"];
+            break;
+        }
+    }
+    [self reloadSpecifiers];
+}
 - (void)setAlive:(id)value specifier:(PSSpecifier*)specifier {
     BOOL newAlive = [value boolValue];
     if (!newAlive) {
         NSDictionary* detail = [self.specifier propertyForKey:@"detail"];
         NSString* label = detail[@"Label"];
         if ([@[@"com.apple.SpringBoard", @"com.apple.backboardd"] containsObject:label]) {
-            alert(@"Alert", localize(@"$STOPKEY"), 888, nil);
+            alert(@"Alert", localize(@"$STOPKEY"), 888, NO, nil);
         } else if ([label containsString:@"com.apple"]) {
-            alert(@"Alert", localize(@"$STOPSYS"), 888, ^{
-                [self startOne:newAlive];
-                _Alive = newAlive;
+            alert(@"Alert", localize(@"$STOPSYS"), 888, YES, ^(BOOL ok){
+                if (ok) {
+                    [self startOne:newAlive];
+                    _Alive = newAlive;
+                }
+                [self updateCell];
             });
         } else {
             [self startOne:newAlive];
             _Alive = newAlive;
         }
+    } else {
+        [self startOne:newAlive];
+        _Alive = newAlive;
     }
+    [self updateCell];
 }
 - (id)getRunAtLoad:(PSSpecifier*)specifier {
     return @(_RunAtLoad);
@@ -237,33 +277,100 @@ static NSString* get_desc(NSString* label, BOOL detail) {
 @interface DaemanRootListController : PSListController
 - (void)onExport;
 - (void)onImport;
-- (NSArray*)getAllDaemons;
 @end
 
 @implementation DaemanRootListController
 - (instancetype)init {
     self = [super init];
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(reloadSpecifiers) userInfo:nil repeats:YES];
     return self;
 }
-- (void)onExport {
-
-}
-- (void)onImport {
-    
-}
-- (void)onRefresh {
-    [self reloadSpecifiers];
-}
-- (NSArray*)getAllDaemons {
+- (BOOL)stopOne:(NSDictionary*)detail {
     CPDistributedMessagingCenter* center = get_ipc();
     if (center == nil) {
         return nil;
     }
-    NSDictionary* dic = [center sendMessageAndReceiveReplyName:@"listAll" userInfo:nil];
-    if (dic == nil) {
-        return nil;
+    NSString* label = detail[@"Label"];
+    NSMutableDictionary* info = [NSMutableDictionary dictionary];
+    int flag = 0;
+    info[@"Label"] = label;
+    info[@"isStart"] = @NO;
+    info[@"flag"] = @(flag);
+    if (detail[@"Plist"] != nil) {
+        info[@"Plist"] = detail[@"Plist"];
     }
-    return dic[@"data"];
+    NSDictionary* dic = [center sendMessageAndReceiveReplyName:@"startOne" userInfo:info];
+    if (dic == nil) {
+        return NO;
+    }
+    NSNumber* status = dic[@"status"];
+    return status.intValue >= 0;
+}
+- (void)onExport {
+    NSDictionary* policy = getPref(@"usr_pol", @{});
+    if (policy.count == 0) {
+        return;
+    }
+    prompt(@"", localize(@"$INPUTNAME"), @"", ^(NSString* text){
+        if (text.length < 1) {
+            return;
+        }
+        NSString* path = [NSString stringWithFormat:@"/var/mobile/Media/%@", text];
+        CPDistributedMessagingCenter* center = get_ipc();
+        if (center == nil) {
+            return;
+        }
+        NSDictionary* dic = [center sendMessageAndReceiveReplyName:@"export" userInfo:@{
+            @"path": path,
+            @"data": policy,
+        }];
+        if (dic != nil) {
+            NSNumber* status = dic[@"status"];
+            if (status.intValue >= 0) {
+                NSString* msg = [NSString stringWithFormat:@"%@:%@", localize(@"$EXPSUC"), path];
+                alert(@"", msg, 888, NO, nil);
+                return;
+            }
+        }
+        alert(@"", localize(@"$EXPERR"), 888, NO, nil);
+    });
+}
+- (void)onImport {
+    alert(@"", localize(@"$STOPSYS"), 888, YES, ^(BOOL ok){
+        if (!ok) {
+            return;
+        }
+        prompt(@"", localize(@"$INPUTNAME"), @"", ^(NSString* text){
+            if (text.length < 1) {
+                return;
+            }
+            NSString* path = [NSString stringWithFormat:@"/var/mobile/Media/%@", text];
+            NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];
+            if (dic != nil && dic.count > 0) {
+                NSArray* items = getAllDaemons();
+                for (NSString* key in dic) {
+                    if ([dic[key] boolValue]) {
+                        continue;
+                    }
+                    for (NSDictionary* item in items) {
+                        NSString* Label = item[@"Label"];
+                        if ([key isEqualToString:Label]) {
+                            [self stopOne:item];
+                            break;
+                        }
+                    }
+                }
+                NSString* msg = [NSString stringWithFormat:@"%@:%@", localize(@"$IMPSUC"), path];
+                alert(@"", msg, 888, NO, nil);
+            } else {
+                NSString* msg = [NSString stringWithFormat:@"%@:%@", localize(@"$IMPERR"), localize(@"$NOEXIST")];
+                alert(@"", msg, 888, NO, nil);
+            }
+        });
+    });
+}
+- (void)onRefresh {
+    [self reloadSpecifiers];
 }
 - (id)getShowSys:(PSSpecifier*)specifier {
     return getPref(@"show_sys", @NO);
@@ -284,7 +391,7 @@ static NSString* get_desc(NSString* label, BOOL detail) {
 - (NSArray*)specifiers {
     _specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
     [self parseLocalizationsForSpecifiers:_specifiers];
-    NSArray* items = [self getAllDaemons];
+    NSArray* items = getAllDaemons();
     BOOL show_sys = [getPref(@"show_sys",  @NO) boolValue];
     if (items != nil) {
         for (NSDictionary* item in items) {
