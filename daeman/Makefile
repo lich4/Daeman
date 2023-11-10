@@ -1,0 +1,13 @@
+export THEOS = /opt/theos_rootless
+export THEOS_DEVICE_IP=127.0.0.1
+export THEOS_DEVICE_PORT=22
+
+#THEOS_PACKAGE_SCHEME=rootless
+
+_THEOS_PLATFORM_DPKG_DEB=dpkg-deb
+THEOS_PLATFORM_DEB_COMPRESSION_TYPE=gzip
+THEOS_PLATFORM_DEB_COMPRESSION_LEVEL=9
+
+include $(THEOS)/makefiles/common.mk
+
+include $(THEOS_MAKE_PATH)/null.mk

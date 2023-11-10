@@ -7,4 +7,5 @@ Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader, com.rpetrich.rock
 Priority: optional
 Architecture: iphoneos-arm
 Author: chaoge
+Maintainer: chaoge
 
