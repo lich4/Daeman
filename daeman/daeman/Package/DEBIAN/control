@@ -1,6 +1,6 @@
 Package: chaoge.Daeman
 Name: Daeman
-Version: 0.1-1
+Version: 0.2
 Description: Manage daemons. see https://github.com/lich4/Daeman. Leave a message on github issue if you have suggestion
 Section: System
 Depends: firmware (>= 5.0), mobilesubstrate, preferenceloader, com.rpetrich.rocketbootstrap
