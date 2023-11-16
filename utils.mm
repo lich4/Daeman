@@ -66,3 +66,49 @@ void prompt(NSString* title, NSString* msg, NSString* hint, void(^cb)(NSString* 
     }
     CFRelease(dialog);
 }
+
+#define MEMORYSTATUS_CMD_GET_PRIORITY_LIST            1
+#define MEMORYSTATUS_CMD_SET_JETSAM_HIGH_WATER_MARK   5
+
+typedef struct memorystatus_priority_entry {
+    pid_t pid;
+    int32_t priority;
+    uint64_t user_data;
+    int32_t limit;
+    uint32_t state;
+} memorystatus_priority_entry_t;
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+int memorystatus_control(uint32_t command, int32_t pid, uint32_t flags, void* buffer, size_t buffersize);
+#ifdef __cplusplus
+}
+#endif
+
+int32_t get_mem_limit(int pid) {
+    int rc = memorystatus_control(MEMORYSTATUS_CMD_GET_PRIORITY_LIST, 0, 0, 0, 0);
+    if (rc < 1) {
+        return -1;
+    }
+    struct memorystatus_priority_entry* buf = (struct memorystatus_priority_entry*)malloc(rc);
+    rc = memorystatus_control(MEMORYSTATUS_CMD_GET_PRIORITY_LIST, 0, 0, buf, rc);
+    int32_t limit = -1;
+    for (int i = 0 ; i < rc; i++) {
+        if (buf[i].pid == pid) {
+            limit = buf[i].limit;
+            break;
+        }
+    }
+    free((void*)buf);
+    return limit;
+}
+
+int set_memory_limit(int pid, int mb) {
+    if (get_mem_limit(pid) < mb) { // 单位MB
+        return memorystatus_control(MEMORYSTATUS_CMD_SET_JETSAM_HIGH_WATER_MARK, pid, mb, 0, 0);
+    }
+    return 0;
+}
+
+

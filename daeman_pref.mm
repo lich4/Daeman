@@ -388,11 +388,40 @@ static NSArray* getAllDaemons() {
         }
     }
 }
+- (NSDictionary*)getBatteryState {
+    CPDistributedMessagingCenter* center = get_ipc();
+    if (center == nil) {
+        return nil;
+    }
+    NSDictionary* dic = [center sendMessageAndReceiveReplyName:@"getBat" userInfo:nil];
+    if (dic == nil) {
+        return nil;
+    }
+    return dic;
+}
 - (NSArray*)specifiers {
     _specifiers = [self loadSpecifiersFromPlistName:@"Root" target:self];
     [self parseLocalizationsForSpecifiers:_specifiers];
     NSArray* items = getAllDaemons();
     BOOL show_sys = [getPref(@"show_sys",  @NO) boolValue];
+    NSString* desc = localize(@"$BATDROP");
+    NSDictionary* bat_dic = [self getBatteryState];
+    int bat_status = [bat_dic[@"status"] intValue];
+    float bat_value = [bat_dic[@"value"] floatValue];
+    if (bat_status == -1) {
+        desc = [desc stringByAppendingFormat:@": %@", localize(@"$WAIT")];
+    } else if (bat_status == -2) {
+        desc = [desc stringByAppendingFormat:@": %@", localize(@"$CHARGE")];
+    } else if (bat_status == -3) {
+        desc = [desc stringByAppendingString:@": error1"];
+    } else {
+        desc = [desc stringByAppendingFormat:@": %f", bat_value];
+    }
+    PSSpecifier* sp = nil;
+    sp = [PSSpecifier preferenceSpecifierNamed:desc target:self set:nil get:nil detail:nil cell:PSStaticTextCell edit:nil];
+     [_specifiers addObject:sp];
+    sp = [PSSpecifier preferenceSpecifierNamed:localize(@"$DAEMONLIST") target:self set:nil get:nil detail:nil cell:PSGroupCell edit:nil];
+    [_specifiers addObject:sp];
     if (items != nil) {
         for (NSDictionary* item in items) {
             NSString* label = item[@"Label"];

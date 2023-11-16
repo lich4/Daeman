@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 extern "C" {
 #include "launchctl.h"
@@ -239,7 +240,10 @@ static NSArray* list_cmd() {
 }
 @end
 
-@implementation MYMessagingCenter
+@implementation MYMessagingCenter {
+    int batts[3];
+    double batlvl[3];
+}
 + (void)load {
     [self sharedInstance];
 }
@@ -252,55 +256,96 @@ static NSArray* list_cmd() {
     return sharedInstance;
 }
 - (instancetype)init {
-    if ((self = [super init])) {
-        _messagingCenter = [CPDistributedMessagingCenter centerNamed:@"msgport.daeman"];
-        rocketbootstrap_distributedmessagingcenter_apply(_messagingCenter);
-        [_messagingCenter runServerOnCurrentThread];
-        [_messagingCenter registerForMessageName:@"listAll" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
-        [_messagingCenter registerForMessageName:@"startOne" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
-        [_messagingCenter registerForMessageName:@"export" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
+    @autoreleasepool {
+        if ((self = [super init])) {
+            _messagingCenter = [CPDistributedMessagingCenter centerNamed:@"msgport.daeman"];
+            rocketbootstrap_distributedmessagingcenter_apply(_messagingCenter);
+            [_messagingCenter runServerOnCurrentThread];
+            [_messagingCenter registerForMessageName:@"listAll" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
+            [_messagingCenter registerForMessageName:@"startOne" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
+            [_messagingCenter registerForMessageName:@"export" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
+            [_messagingCenter registerForMessageName:@"getBat" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
+        }
+        UIDevice* dev = UIDevice.currentDevice;
+        dev.batteryMonitoringEnabled = YES;
+        batts[0] = 0;
+        batlvl[0] = 0;
+        batts[1] = 0;
+        batlvl[1] = 0;
+        batts[2] = (int)time(0);
+        batlvl[2] = dev.batteryLevel;
+        void (^block)(NSNotification* note) = ^(NSNotification* note){
+            int ts = (int)time(0);
+            double lvl = dev.batteryLevel;
+            batts[0] = batts[1];
+            batlvl[0] = batlvl[1];
+            batts[1] = batts[2];
+            batlvl[1] = batlvl[2];
+            batts[2] = ts;
+            batlvl[2] = lvl;
+            NSLog(@"daeman battery %d,%d,%lf", (int)dev.batteryState, ts, lvl);
+        };
+        [[NSNotificationCenter defaultCenter] addObserverForName:UIDeviceBatteryLevelDidChangeNotification object:nil queue:nil usingBlock:block];
+        return self;
     }
-    return self;
 }
 - (NSDictionary*)handleMessageNamed:(NSString*)name withUserInfo:(NSDictionary*)userInfo {
-    if ([name isEqualToString:@"listAll"]) {
-        return @{
-            @"data": list_cmd(),
-        };
-    } else if ([name isEqualToString:@"startOne"]) {
-        NSString* Label = userInfo[@"Label"];
-        NSNumber* isStart = userInfo[@"isStart"];
-        NSString* Plist =  userInfo[@"Plist"];
-        NSNumber* flag = userInfo[@"flag"];
-        if (isStart.boolValue) {
-            if (Plist != nil) {
-                load_cmd(Plist.UTF8String, YES, flag.intValue);
+    @autoreleasepool {
+        if ([name isEqualToString:@"listAll"]) {
+            return @{
+                @"data": list_cmd(),
+            };
+        } else if ([name isEqualToString:@"startOne"]) {
+            NSString* Label = userInfo[@"Label"];
+            NSNumber* isStart = userInfo[@"isStart"];
+            NSString* Plist =  userInfo[@"Plist"];
+            NSNumber* flag = userInfo[@"flag"];
+            if (isStart.boolValue) {
+                if (Plist != nil) {
+                    load_cmd(Plist.UTF8String, YES, flag.intValue);
+                }
+                start_cmd(Label.UTF8String, YES);
+            } else {
+                if (Plist != nil) {
+                    load_cmd(Plist.UTF8String, NO, flag.intValue);
+                }
+                start_cmd(Label.UTF8String, NO);
             }
-            start_cmd(Label.UTF8String, YES);
-        } else {
-            if (Plist != nil) {
-                load_cmd(Plist.UTF8String, NO, flag.intValue);
+            return @{
+                @"status": @0,
+            };
+        } else if ([name isEqualToString:@"export"]) {
+            NSString* path = userInfo[@"path"];
+            NSDictionary* policy = userInfo[@"data"];
+            BOOL status = [policy writeToFile:path atomically:YES];
+            return @{
+                @"status": @(status?0:-1),
+            };
+        } else if ([name isEqualToString:@"getBat"]) {
+            if (batts[0] == 0) {
+                return @{
+                    @"status": @-1,
+                };
+            } else {
+                float v = (batlvl[0] - batlvl[2]) * 100 * 3600 / (batts[2] - batts[0]);
+                return @{
+                    @"status": @0,
+                    @"value": @(v),
+                };
             }
-            start_cmd(Label.UTF8String, NO);
         }
-        return @{
-            @"status": @0,
-        };
-    } else if ([name isEqualToString:@"export"]) {
-        NSString* path = userInfo[@"path"];
-        NSDictionary* policy = userInfo[@"data"];
-        BOOL status = [policy writeToFile:path atomically:YES];
-        return @{
-            @"status": @(status?0:-1),
-        };
+        return nil;
     }
-    return nil;
 }
 @end
 
 int main (int argc, char** argv) {
-    platformize_me();
-    [[NSRunLoop mainRunLoop] run];
-    NSLog(@"daeman abnormally exit");
+    @autoreleasepool {
+        NSLog(@"daeman start");
+        platformize_me();
+        set_memory_limit(getpid(), 20);
+        [[NSRunLoop mainRunLoop] run];
+        NSLog(@"daeman abnormally exit");
+    }
 }
 

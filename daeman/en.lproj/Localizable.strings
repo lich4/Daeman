@@ -23,4 +23,7 @@
 "$STOPSYS"  = "It's very dangerous to stop system daemon, proceed?";
 "$STOPKEY"  = "System core service is forbidden to shutdown!";
 "$INPUTNAME" = "Input filename";
+"$BATDROP"  = "Power drop speed(1%/hour)";
+"$WAIT"     = "Initializing...";
+"$CHARGE"   = "CHARGING";
 
