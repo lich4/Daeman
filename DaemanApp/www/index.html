@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Daeman</title>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=0">
+    <link rel="shotcut icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/element-ui.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <script src="js/polyfill.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(245, 245, 247);
+            height: auto;
+        }
+
+        #btitle {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #bbody {
+            background-color: rgb(239, 239, 244);
+            min-height: 100vh;
+        }
+
+        .col-item {
+            background-color: white;
+        }
+
+        .el-card__body {
+            padding: 5px 25px 5px 25px;
+        }
+
+        .fs-md {
+            font-size: 17px;
+        }
+
+        .fs-md-r {
+            font-size: 25px;
+            color: grey;
+            float: right;
+        }
+
+        .fs-sm {
+            font-size: 15px;
+            color: grey;
+        }
+
+        .fs-sm-r {
+            font-size: 15px;
+            color: grey;
+            float: right;
+        }
+
+        .fs-ssm {
+            font-size: 10px !important;
+            color: grey;
+        }
+
+        .disabled {
+            color: grey;
+        }
+
+        .click {
+            color: #409EFF !important;
+            padding: 0;
+        }
+    </style>
+    <div id="app">
+        <el-row id="btitle" class="mt-3 mb-2">
+            {{title}}
+        </el-row>
+        <el-divider class="my-0" direction="horizontal"></el-divider>
+        <div id="bbody">
+            <el-row class="col-item px-3 py-2">
+                <el-label class="fs-md click" @click="update_daemon">Refresh</el-label>
+            </el-row>
+            <el-divider class="my-0" direction="horizontal"></el-divider>
+            <el-row class="col-item px-3 py-2">
+                <el-label class="fs-md">Show system daemon</el-label>
+                <el-switch class="fs-md-r" inactive-color="#ff4949" v-model="show_sys"></el-switch>
+            </el-row>
+            <el-divider class="my-0" direction="horizontal"></el-divider>
+            <el-row class="p-2">
+                <el-label class="fs-sm">Daemon List</el-label>
+            </el-row>
+            <el-divider class="my-0" direction="horizontal"></el-divider>
+            <div class="col-item" v-loading="loading">
+                <template v-for="item in daemon_list" v-if="show_sys||item.Type<10">
+                    <div class="mb-2">
+                        <el-row class="mx-4">
+                            <el-col :span="22">
+                                <el-row>{{get_desc(item,"label")}}</el-row>
+                                <el-row class="fs-ssm">{{get_desc(item,"simple")}}</el-row>
+                            </el-col>
+                            <el-col :span="2">
+                                <el-label class="fs-md-r mt-1">
+                                    <i :class="update_icon(item)" @click="click_show(item)"></i>
+                                </el-label>
+                            </el-col>
+                        </el-row>
+                        <el-card class="py-1" v-if="show_detail[item.Label]" shadow="never">
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">{{get_desc(item,"detail")}}</el-label>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">Alive</el-label>
+                                <el-switch class="fs-md-r" inactive-color="#ff4949" v-model="item.Pid>=0" @change="click_ctrl(item)"></el-switch>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">RunAtLoad</el-label>
+                                <el-switch class="fs-md-r" disabled v-model="item.RunAtLoad"></el-switch>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">KeepAlive</el-label>
+                                <el-switch class="fs-md-r" disabled v-model="item.KeepAlive"></el-switch>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">Pid</el-label>
+                                <el-label class="fs-sm-r" disabled>{{item.Pid}}</el-label>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">User</el-label>
+                                <el-label class="fs-sm-r" disabled>{{item.User?item.User:"mobile"}}</el-label>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">Plist</el-label>
+                            </el-row>
+                            <el-row class="col-item">
+                                <el-label class="fs-ssm">{{item.Plist}}</el-label>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                            <el-row class="col-item">
+                                <el-label class="fs-sm">Program</el-label>
+                            </el-row>
+                            <el-row class="col-item">
+                                <el-label class="fs-ssm">{{item.Program}}</el-label>
+                            </el-row>
+                            <el-divider class="mt-1 mb-1" direction="horizontal"></el-divider>
+                        </el-card>
+                    </div>
+                    <el-divider class="my-0" direction="horizontal"></el-divider>
+                </template>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

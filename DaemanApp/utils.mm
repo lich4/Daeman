@@ -1,47 +1,158 @@
 //
-//  main.cpp
-//  daeman
+//  utils.m
+//  TrollStoreRemoteHelper
 //
-//  Created by APPLE on 2023/10/21.
-//  Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+//  Created by APPLE on 2023/12/27.
+//  Copyright © 2023 chaoge. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#include "utils.h"
+
+#define POSIX_SPAWN_PERSONA_FLAGS_OVERRIDE 1
+extern "C" {
+int posix_spawnattr_set_persona_np(const posix_spawnattr_t* __restrict, uid_t, uint32_t);
+int posix_spawnattr_set_persona_uid_np(const posix_spawnattr_t* __restrict, uid_t);
+int posix_spawnattr_set_persona_gid_np(const posix_spawnattr_t* __restrict, uid_t);
+}
+
+int fd_is_valid(int fd) {
+    return fcntl(fd, F_GETFD) != -1 || errno != EBADF;
+}
+
+NSString* getNSStringFromFile(int fd) {
+    NSMutableString* ms = [NSMutableString new];
+    ssize_t num_read;
+    char c;
+    if (!fd_is_valid(fd)) {
+        return @"";
+    }
+    while ((num_read = read(fd, &c, sizeof(c)))) {
+        [ms appendString:[NSString stringWithFormat:@"%c", c]];
+        //if(c == '\n') {
+        //    break;
+        //}
+    }
+    return ms.copy;
+}
+
+extern char** environ;
+int spawn(NSArray* args, NSString** stdOut, NSString** stdErr, pid_t* pidPtr, int flag) {
+    NSString* file = args.firstObject;
+    NSUInteger argCount = [args count];
+    char **argsC = (char **)malloc((argCount + 1) * sizeof(char*));
+    for (NSUInteger i = 0; i < argCount; i++) {
+        argsC[i] = strdup([[args objectAtIndex:i] UTF8String]);
+    }
+    argsC[argCount] = NULL;
+    posix_spawnattr_t attr;
+    posix_spawnattr_init(&attr);
+    if ((flag & SPAWN_FLAG_ROOT) != 0) {
+        posix_spawnattr_set_persona_np(&attr, 99, POSIX_SPAWN_PERSONA_FLAGS_OVERRIDE);
+        posix_spawnattr_set_persona_uid_np(&attr, 0);
+        posix_spawnattr_set_persona_gid_np(&attr, 0);
+    }
+    posix_spawn_file_actions_t action;
+    posix_spawn_file_actions_init(&action);
+    int outErr[2];
+    if(stdErr) {
+        pipe(outErr);
+        posix_spawn_file_actions_adddup2(&action, outErr[1], STDERR_FILENO);
+        posix_spawn_file_actions_addclose(&action, outErr[0]);
+    }
+    int out[2];
+    if(stdOut) {
+        pipe(out);
+        posix_spawn_file_actions_adddup2(&action, out[1], STDOUT_FILENO);
+        posix_spawn_file_actions_addclose(&action, out[0]);
+    }
+    pid_t task_pid;
+    pid_t* task_pid_ptr = &task_pid;
+    if (pidPtr != 0) {
+        task_pid_ptr = pidPtr;
+    }
+    int status = -200;
+    int spawnError = posix_spawnp(task_pid_ptr, [file UTF8String], &action, &attr, (char* const*)argsC, environ);
+    NSLog(@"posix_spawn %@ %d -> %d", args.firstObject, getpid(), task_pid);
+    posix_spawnattr_destroy(&attr);
+    for (NSUInteger i = 0; i < argCount; i++) {
+        free(argsC[i]);
+    }
+    free(argsC);
+    if(spawnError != 0) {
+        NSLog(@"posix_spawn error %d\n", spawnError);
+        return spawnError;
+    }
+    if ((flag & SPAWN_FLAG_NOWAIT) != 0) {
+        return 0;
+    }
+    __block volatile BOOL _isRunning = YES;
+    NSMutableString* outString = [NSMutableString new];
+    NSMutableString* errString = [NSMutableString new];
+    dispatch_semaphore_t sema = 0;
+    dispatch_queue_t logQueue;
+    if(stdOut || stdErr) {
+        logQueue = dispatch_queue_create("com.opa334.TrollStore.LogCollector", NULL);
+        sema = dispatch_semaphore_create(0);
+        int outPipe = out[0];
+        int outErrPipe = outErr[0];
+        __block BOOL outEnabled = stdOut != nil;
+        __block BOOL errEnabled = stdErr != nil;
+        dispatch_async(logQueue, ^{
+            while(_isRunning) {
+                @autoreleasepool {
+                    if(outEnabled) {
+                        [outString appendString:getNSStringFromFile(outPipe)];
+                    }
+                    if(errEnabled) {
+                        [errString appendString:getNSStringFromFile(outErrPipe)];
+                    }
+                }
+            }
+            dispatch_semaphore_signal(sema);
+        });
+    }
+    do {
+        if (waitpid(task_pid, &status, 0) != -1) {
+            NSLog(@"Child status %d", WEXITSTATUS(status));
+        } else {
+            perror("waitpid");
+            _isRunning = NO;
+            return -222;
+        }
+    } while (!WIFEXITED(status) && !WIFSIGNALED(status));
+    _isRunning = NO;
+    if (stdOut || stdErr) {
+        if(stdOut) {
+            close(out[1]);
+        }
+        if(stdErr) {
+            close(outErr[1]);
+        }
+        dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+        if(stdOut) {
+            *stdOut = outString.copy;
+        }
+        if(stdErr) {
+            *stdErr = errString.copy;
+        }
+    }
+    return WEXITSTATUS(status);
+}
+
+
+extern "C" int _NSGetExecutablePath(char* buf, uint32_t* bufsize);
+NSString* getAppEXEPath() {
+    char exe[256];
+    uint32_t bufsize = sizeof(exe);
+    _NSGetExecutablePath(exe, &bufsize);
+    return @(exe);
+}
+
 
 extern "C" {
 #include "launchctl.h"
 }
-#include "utils.h"
-#include <dlfcn.h>
-
-static int platformize_me() {
-    int ret = 0;
-    #define FLAG_PLATFORMIZE (1 << 1)
-    void* h_jailbreak = dlopen("/usr/lib/libjailbreak.dylib", RTLD_LAZY);
-    if (h_jailbreak) {
-        const char* dlsym_error = 0;
-        dlerror();
-        typedef void (*fix_entitle_prt_t)(pid_t pid, uint32_t what);
-        fix_entitle_prt_t jb_oneshot_entitle_now = (fix_entitle_prt_t)dlsym(h_jailbreak, "jb_oneshot_entitle_now");
-        dlsym_error = dlerror();
-        if (jb_oneshot_entitle_now && !dlsym_error) {
-            jb_oneshot_entitle_now(getpid(), FLAG_PLATFORMIZE);
-        }
-        dlerror();
-        typedef void (*fix_setuid_prt_t)(pid_t pid);
-        fix_setuid_prt_t jb_oneshot_fix_setuid_now = (fix_setuid_prt_t)dlsym(h_jailbreak, "jb_oneshot_fix_setuid_now");
-        dlsym_error = dlerror();
-        if (jb_oneshot_fix_setuid_now && !dlsym_error) {
-            jb_oneshot_fix_setuid_now(getpid());
-        }
-    }
-    ret += setuid(0);
-    ret += setgid(0);
-    return ret;
-}
-
-static int start_cmd(const char* name, bool start) {
+int start_cmd(const char* name, bool start) {
     @autoreleasepool {
         xpc_object_t dict, reply;
         int ret;
@@ -55,7 +166,7 @@ static int start_cmd(const char* name, bool start) {
 }
 
 // FLAG_W:1 FLAG_FORCE:2
-static int load_cmd(const char* path, bool load, int flag) {
+int load_cmd(const char* path, bool load, int flag) {
     xpc_object_t dict, reply;
     int ret;
     unsigned int domain = 0;
@@ -175,7 +286,7 @@ static NSDictionary* list_1_cmd(const char* label) {
     return xpc_2_ns(service);
 }
 
-static NSArray* list_cmd() {
+NSArray* list_cmd() {
     @autoreleasepool {
         xpc_object_t reply;
         xpc_object_t dict = xpc_dictionary_create(nil, nil, 0);
@@ -215,6 +326,7 @@ static NSArray* list_cmd() {
            }
         }
         add_plist_info(0, @"/Library/LaunchDaemons", dic);
+        add_plist_info(1, @"/var/jb/Library/LaunchDaemons", dic);
         add_plist_info(10, @"/System/Library/LaunchDaemons", dic);
         add_plist_info(11, @"/System/Library/NanoLaunchDaemons", dic);
         for (NSString* key in dic.allKeys) {
@@ -230,122 +342,6 @@ static NSArray* list_cmd() {
         [dic removeObjectForKey:@"chaoge.daeman"];
         NSArray* sortedKeys = [dic.allKeys sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)];
         return [dic objectsForKeys:sortedKeys notFoundMarker:NSNull.null];
-    }
-}
-
-#import <AppSupport/CPDistributedMessagingCenter.h>
-#import <rocketbootstrap/rocketbootstrap.h>
-@interface MYMessagingCenter : NSObject {
-    CPDistributedMessagingCenter * _messagingCenter;
-}
-@end
-
-@implementation MYMessagingCenter {
-    int batts[3];
-    double batlvl[3];
-}
-+ (void)load {
-    [self sharedInstance];
-}
-+ (instancetype)sharedInstance {
-    static dispatch_once_t once = 0;
-    __strong static id sharedInstance = nil;
-    dispatch_once(&once, ^{
-        sharedInstance = [self new];
-    });
-    return sharedInstance;
-}
-- (instancetype)init {
-    @autoreleasepool {
-        if ((self = [super init])) {
-            _messagingCenter = [CPDistributedMessagingCenter centerNamed:@"msgport.daeman"];
-            rocketbootstrap_distributedmessagingcenter_apply(_messagingCenter);
-            [_messagingCenter runServerOnCurrentThread];
-            [_messagingCenter registerForMessageName:@"listAll" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
-            [_messagingCenter registerForMessageName:@"startOne" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
-            [_messagingCenter registerForMessageName:@"export" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
-            [_messagingCenter registerForMessageName:@"getBat" target:self selector:@selector(handleMessageNamed:withUserInfo:)];
-        }
-        UIDevice* dev = UIDevice.currentDevice;
-        dev.batteryMonitoringEnabled = YES;
-        batts[0] = 0;
-        batlvl[0] = 0;
-        batts[1] = 0;
-        batlvl[1] = 0;
-        batts[2] = (int)time(0);
-        batlvl[2] = dev.batteryLevel;
-        void (^block)(NSNotification* note) = ^(NSNotification* note){
-            int ts = (int)time(0);
-            double lvl = dev.batteryLevel;
-            batts[0] = batts[1];
-            batlvl[0] = batlvl[1];
-            batts[1] = batts[2];
-            batlvl[1] = batlvl[2];
-            batts[2] = ts;
-            batlvl[2] = lvl;
-            NSLog(@"daeman battery %d,%d,%lf", (int)dev.batteryState, ts, lvl);
-        };
-        [[NSNotificationCenter defaultCenter] addObserverForName:UIDeviceBatteryLevelDidChangeNotification object:nil queue:nil usingBlock:block];
-        return self;
-    }
-}
-- (NSDictionary*)handleMessageNamed:(NSString*)name withUserInfo:(NSDictionary*)userInfo {
-    @autoreleasepool {
-        if ([name isEqualToString:@"listAll"]) {
-            return @{
-                @"data": list_cmd(),
-            };
-        } else if ([name isEqualToString:@"startOne"]) {
-            NSString* Label = userInfo[@"Label"];
-            NSNumber* isStart = userInfo[@"isStart"];
-            NSString* Plist =  userInfo[@"Plist"];
-            NSNumber* flag = userInfo[@"flag"];
-            if (isStart.boolValue) {
-                if (Plist != nil) {
-                    load_cmd(Plist.UTF8String, YES, flag.intValue);
-                }
-                start_cmd(Label.UTF8String, YES);
-            } else {
-                if (Plist != nil) {
-                    load_cmd(Plist.UTF8String, NO, flag.intValue);
-                }
-                start_cmd(Label.UTF8String, NO);
-            }
-            return @{
-                @"status": @0,
-            };
-        } else if ([name isEqualToString:@"export"]) {
-            NSString* path = userInfo[@"path"];
-            NSDictionary* policy = userInfo[@"data"];
-            BOOL status = [policy writeToFile:path atomically:YES];
-            return @{
-                @"status": @(status?0:-1),
-            };
-        } else if ([name isEqualToString:@"getBat"]) {
-            if (batts[0] == 0) {
-                return @{
-                    @"status": @-1,
-                };
-            } else {
-                float v = (batlvl[0] - batlvl[2]) * 100 * 3600 / (batts[2] - batts[0]);
-                return @{
-                    @"status": @0,
-                    @"value": @(v),
-                };
-            }
-        }
-        return nil;
-    }
-}
-@end
-
-int main (int argc, char** argv) {
-    @autoreleasepool {
-        NSLog(@"daeman start");
-        platformize_me();
-        set_memory_limit(getpid(), 80);
-        [[NSRunLoop mainRunLoop] run];
-        NSLog(@"daeman abnormally exit");
     }
 }
 

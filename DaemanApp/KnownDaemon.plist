@@ -1,0 +1,4972 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Dropbear</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Dropbear for remote login</string>
+			<string>Dropbear远程登录</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Dropbear</string>
+			<string>Dropbear</string>
+		</array>
+	</dict>
+	<key>com.apple.ABDatabaseDoctor</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>AddressBook database repair</string>
+			<string>通讯录数据库修复</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AddressBook</string>
+			<string>通讯录</string>
+		</array>
+	</dict>
+	<key>com.apple.AdminLite</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Turns on / off setting boot-args. When and app is not responding, this force closes it. You'll have to wait for unresponsive apps if you delete this. The AdminLite framework's sole purpose is act as a client to the com.apple.AdminLite service. There is are 2 functions in this framework, the high-level AdminLiteNVRAMSet and the low-level nvram_set</string>
+			<string>进程管理</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AdminLite</string>
+			<string>AdminLite</string>
+		</array>
+	</dict>
+	<key>com.apple.AppleSSODaemon</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple ID</string>
+			<string>Apple ID</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AppleSSODaemon</string>
+			<string>AppleSSODaemon</string>
+		</array>
+	</dict>
+	<key>com.apple.AssetCacheLocator</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The caching server speeds up the download of software distributed by Apple through the Internet.</string>
+			<string>The caching server speeds up the download of software distributed by Apple through the Internet.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AssetCacheLocator</string>
+			<string>AssetCacheLocator</string>
+		</array>
+	</dict>
+	<key>com.apple.AssetCacheLocatorService</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The caching server speeds up the download of software distributed by Apple through the Internet</string>
+			<string>The caching server speeds up the download of software distributed by Apple through the Internet</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AssetCacheLocatorService</string>
+			<string>AssetCacheLocatorService</string>
+		</array>
+	</dict>
+	<key>com.apple.AuthBrokerAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The AuthBrokerAgent is responsible for handling proxy credentials. If the credentials of a proxy setup are improperly stored (for example in one's keychain) then the AuthBrokerAgent can runaway</string>
+			<string>The AuthBrokerAgent is responsible for handling proxy credentials. If the credentials of a proxy setup are improperly stored (for example in one's keychain) then the AuthBrokerAgent can runaway</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AuthBrokerAgent</string>
+			<string>AuthBrokerAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.BTServer</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>Bluetooth</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>BTServer</string>
+			<string>BTServer</string>
+		</array>
+	</dict>
+	<key>com.apple.BTServer.avrcp</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+	</dict>
+	<key>com.apple.BTServer.cloudpairing</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+	</dict>
+	<key>com.apple.BTServer.le</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+	</dict>
+	<key>com.apple.BTServer.map</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+	</dict>
+	<key>com.apple.BTServer.pbap</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+	</dict>
+	<key>com.apple.BarcodeSupport.BarcodeNotificationService</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Camera QR code reader</string>
+			<string>Camera QR code reader</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>BarcodeNotificationService</string>
+			<string>BarcodeNotificationService</string>
+		</array>
+	</dict>
+	<key>com.apple.CallHistorySyncHelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>for mobile phones</string>
+			<string>for mobile phones</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CallHistorySyncHelper</string>
+			<string>CallHistorySyncHelper</string>
+		</array>
+	</dict>
+	<key>com.apple.CloudPhotoDerivative</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Thumbnails for icloud</string>
+			<string>Thumbnails for icloud</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CloudPhotoDerivative</string>
+			<string>CloudPhotoDerivative</string>
+		</array>
+	</dict>
+	<key>com.apple.CommCenter</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Deal with the radios</string>
+			<string>蜂窝网</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CommCenter</string>
+			<string>CommCenter</string>
+		</array>
+	</dict>
+	<key>com.apple.CommCenterMobileHelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>cellular data network</string>
+			<string>cellular data network</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CommCenterMobileHelper</string>
+			<string>CommCenterMobileHelper</string>
+		</array>
+	</dict>
+	<key>com.apple.CommCenterRootHelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>cellular data network</string>
+			<string>cellular data network</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CommCenterRootHelper</string>
+			<string>CommCenterRootHelper</string>
+		</array>
+	</dict>
+	<key>com.apple.CoreAuthentication</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>handles biometric data / touch id</string>
+			<string>handles biometric data / touch id</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CoreAuthentication</string>
+			<string>CoreAuthentication</string>
+		</array>
+	</dict>
+	<key>com.apple.CrashHousekeeping</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>removes logs</string>
+			<string>崩溃日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>CrashHousekeeping</string>
+			<string>CrashHousekeeping</string>
+		</array>
+	</dict>
+	<key>com.apple.DMHelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Kechain, SSL, bla bla, keep on</string>
+			<string>Kechain, SSL, bla bla, keep on</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DMHelper</string>
+			<string>DMHelper</string>
+		</array>
+	</dict>
+	<key>com.apple.DataDetectorsSource</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The DataDetectorsSourceAccess command manages and controls access to the content of dynamic sources for the DataDetectors clients. This tool should not be run directly.</string>
+			<string>The DataDetectorsSourceAccess command manages and controls access to the content of dynamic sources for the DataDetectors clients. This tool should not be run directly.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DataDetectorsSource</string>
+			<string>DataDetectorsSource</string>
+		</array>
+	</dict>
+	<key>com.apple.DataDetectorsSourceAccess</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Find phone numbers, shipping tracking codes</string>
+			<string>Find phone numbers, shipping tracking codes</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DataDetectorsSourceAccess</string>
+			<string>DataDetectorsSourceAccess</string>
+		</array>
+	</dict>
+	<key>com.apple.DragUI</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>multitasking UI</string>
+			<string>multitasking UI</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DragUI</string>
+			<string>DragUI</string>
+		</array>
+	</dict>
+	<key>com.apple.DumpBasebandCrash</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Collect logs from the Baseband if it crashes</string>
+			<string>崩溃日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DumpBasebandCrash</string>
+			<string>DumpBasebandCrash</string>
+		</array>
+	</dict>
+	<key>com.apple.DumpPanic</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Reads kernel panics from block storage and writes to log</string>
+			<string>崩溃日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DumpPanic</string>
+			<string>DumpPanic</string>
+		</array>
+	</dict>
+	<key>com.apple.EscrowSecurityAlert</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Escrow is a data security measure in which acryptographic key is entrusted to a third party (i.e., kept in escrow). Under normal circumstances, the key is not released to someone other than the sender or receiver without proper authorization</string>
+			<string>Escrow is a data security measure in which acryptographic key is entrusted to a third party (i.e., kept in escrow). Under normal circumstances, the key is not released to someone other than the sender or receiver without proper authorization</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>EscrowSecurityAlert</string>
+			<string>EscrowSecurityAlert</string>
+		</array>
+	</dict>
+	<key>com.apple.Filecoordination</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>coordinates the reading and writing of files and directories among file presenters.</string>
+			<string>文件协调管理</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Filecoordination</string>
+			<string>Filecoordination</string>
+		</array>
+	</dict>
+	<key>com.apple.Fileprovider</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>An extension other apps use to access files and folders managed by your app and synced with a remote storage.</string>
+			<string>An extension other apps use to access files and folders managed by your app and synced with a remote storage.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Fileprovider</string>
+			<string>Fileprovider</string>
+		</array>
+	</dict>
+	<key>com.apple.GSSCred</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Generic Security Services</string>
+			<string>Generic Security Services</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>GSSCred</string>
+			<string>GSSCred</string>
+		</array>
+	</dict>
+	<key>com.apple.IOAccelMemoryInfoCollector</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>probably logging</string>
+			<string>probably logging</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>IOAccelMemoryInfoCollector</string>
+			<string>IOAccelMemoryInfoCollector</string>
+		</array>
+	</dict>
+	<key>com.apple.MDNSResponerHelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>mDNSResponder, is a core part of the Bonjour protocol. Bonjour is Apple’s zero-configuration networking service, which basically means it’s how Apple devices find each other on a network. Our process, mDNSResponder, regularly scans your local network looking for other Bonjour-enabled devices.</string>
+			<string>mDNSResponder, is a core part of the Bonjour protocol. Bonjour is Apple’s zero-configuration networking service, which basically means it’s how Apple devices find each other on a network. Our process, mDNSResponder, regularly scans your local network looking for other Bonjour-enabled devices.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>MDNSResponerHelper</string>
+			<string>MDNSResponerHelper</string>
+		</array>
+	</dict>
+	<key>com.apple.Maps.pushdaemon</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>push notification for maps</string>
+			<string>push notification for maps</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pushdaemon</string>
+			<string>pushdaemon</string>
+		</array>
+	</dict>
+	<key>com.apple.MobileAccessoryUpdater</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Update attached accessories like Haywire</string>
+			<string>Update attached accessories like Haywire</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>MobileAccessoryUpdater</string>
+			<string>MobileAccessoryUpdater</string>
+		</array>
+	</dict>
+	<key>com.apple.MobileFileIntegrity</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>AMFI</string>
+			<string>AMFI</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>MobileFileIntegrity</string>
+			<string>MobileFileIntegrity</string>
+		</array>
+	</dict>
+	<key>com.apple.MobileInternetSharing</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>3G-4G-5G InternetSharing</string>
+			<string>3G-4G-5G InternetSharing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>MobileInternetSharing</string>
+			<string>MobileInternetSharing</string>
+		</array>
+	</dict>
+	<key>com.apple.NoATWAKEUP</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>dont know, but disabling is widely done</string>
+			<string>dont know, but disabling is widely done</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>NoATWAKEUP</string>
+			<string>NoATWAKEUP</string>
+		</array>
+	</dict>
+	<key>com.apple.OTACrashCopier</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Moves crashes from Over the Air software updates to /var/mobile/Library/Logs. Feel free to remove the daemon</string>
+			<string>Moves crashes from Over the Air software updates to /var/mobile/Library/Logs. Feel free to remove the daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>OTACrashCopier</string>
+			<string>OTACrashCopier</string>
+		</array>
+	</dict>
+	<key>com.apple.OTATaskingAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Tells the device to periodicallycheck for OTA updates. Feel free to remove.</string>
+			<string>Tells the device to periodicallycheck for OTA updates. Feel free to remove.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>OTATaskingAgent</string>
+			<string>OTATaskingAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.Oscard</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Core Motion Process accelerometer, gyroscope, pedometer, and environment-related events.</string>
+			<string>Core Motion Process accelerometer, gyroscope, pedometer, and environment-related events.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Oscard</string>
+			<string>Oscard</string>
+		</array>
+	</dict>
+	<key>com.apple.PerfPowerServicesExtended</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>PerfPowerServices -- manages structured log archives that enable retrieval of system power and performance data.DESCRIPTIONThe PerfPowerServices daemon works only within the context of a launchd job and should not be run from the command line.</string>
+			<string>PerfPowerServices -- manages structured log archives that enable retrieval of system power and performance data.DESCRIPTIONThe PerfPowerServices daemon works only within the context of a launchd job and should not be run from the command line.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>PerfPowerServicesExtended</string>
+			<string>PerfPowerServicesExtended</string>
+		</array>
+	</dict>
+	<key>com.apple.PowerUIAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>com.apple.PowerUIAgent process is associated with the optimized battery charging optio</string>
+			<string>com.apple.PowerUIAgent process is associated with the optimized battery charging optio</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>PowerUIAgent</string>
+			<string>PowerUIAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.ProxiedCrashCopier</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Move crash reports from devices like the Apple WatchMove crash reports from devices like the Apple Watch</string>
+			<string>Move crash reports from devices like the Apple WatchMove crash reports from devices like the Apple Watch</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ProxiedCrashCopier</string>
+			<string>ProxiedCrashCopier</string>
+		</array>
+	</dict>
+	<key>com.apple.ProxiedCrashCopier.ProxyingDevice</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Move crash reports from devices like the Apple Watch</string>
+			<string>Move crash reports from devices like the Apple Watch</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ProxyingDevice</string>
+			<string>ProxyingDevice</string>
+		</array>
+	</dict>
+	<key>com.apple.PurpleReverseProxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>has to do with image and restore and such try to leave alone</string>
+			<string>has to do with image and restore and such try to leave alone</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>PurpleReverseProxy</string>
+			<string>PurpleReverseProxy</string>
+		</array>
+	</dict>
+	<key>com.apple.ReportCrash</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Send crash reports to Apple</string>
+			<string>Send crash reports to Apple</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ReportCrash</string>
+			<string>ReportCrash</string>
+		</array>
+	</dict>
+	<key>com.apple.ReportCrash.Jetsam</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>log files</string>
+			<string>log files</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Jetsam</string>
+			<string>Jetsam</string>
+		</array>
+	</dict>
+	<key>com.apple.ReportMemoryException</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The ReportMemoryException command is a system service which should only be launched by launchd. It generates memory usage diagnostic logs asindicated by system events such as memory limit violations.</string>
+			<string>The ReportMemoryException command is a system service which should only be launched by launchd. It generates memory usage diagnostic logs asindicated by system events such as memory limit violations.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ReportMemoryException</string>
+			<string>ReportMemoryException</string>
+		</array>
+	</dict>
+	<key>com.apple.Reportcrash.SimulateCrash</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>log files</string>
+			<string>log files</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>SimulateCrash</string>
+			<string>SimulateCrash</string>
+		</array>
+	</dict>
+	<key>com.apple.SCHelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Smart Card helper</string>
+			<string>Smart Card helper</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>SCHelper</string>
+			<string>SCHelper</string>
+		</array>
+	</dict>
+	<key>com.apple.SChelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Smart Card helper</string>
+			<string>Smart Card helper</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>SChelper</string>
+			<string>SChelper</string>
+		</array>
+	</dict>
+	<key>com.apple.SepUpdateTimer</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Summertime Wintertime timer</string>
+			<string>Summertime Wintertime timer</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>SepUpdateTimer</string>
+			<string>SepUpdateTimer</string>
+		</array>
+	</dict>
+	<key>com.apple.SpringBoard</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>SpringBoard</string>
+			<string>桌面进程</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>SpringBoard</string>
+			<string>SpringBoard</string>
+		</array>
+	</dict>
+	<key>com.apple.TextInput.kbd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>They keyboard</string>
+			<string>They keyboard</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>kbd</string>
+			<string>kbd</string>
+		</array>
+	</dict>
+	<key>com.apple.UsageTrackingAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>UsageTrackingAgent monitors and reports usage budgets set by Health, Parental Controls, or Device Management.</string>
+			<string>UsageTrackingAgent monitors and reports usage budgets set by Health, Parental Controls, or Device Management.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>UsageTrackingAgent</string>
+			<string>UsageTrackingAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.UserEventAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The UserEventAgent utility is a daemon that loads system-provided plugins to handle high-level system events which cannot be monitored directly by launchd.3555</string>
+			<string>The UserEventAgent utility is a daemon that loads system-provided plugins to handle high-level system events which cannot be monitored directly by launchd.3555</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>UserEventAgent</string>
+			<string>UserEventAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.VideoSubscriberAccount</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Video Subscriber Account provides APIs to help you create apps that require secure communication with a TV provider’s authentication service. The framework also informs the Apple TV app about whether your user has a subscription and the details of that subscription.</string>
+			<string>Video Subscriber Account provides APIs to help you create apps that require secure communication with a TV provider’s authentication service. The framework also informs the Apple TV app about whether your user has a subscription and the details of that subscription.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>VideoSubscriberAccount</string>
+			<string>VideoSubscriberAccount</string>
+		</array>
+	</dict>
+	<key>com.apple.VoiceOverTouch</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Accessibility</string>
+			<string>语音控制</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>VoiceOverTouch</string>
+			<string>VoiceOverTouch</string>
+		</array>
+	</dict>
+	<key>com.apple.WebBookmarks</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>bookmarks web</string>
+			<string>bookmarks web</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>WebBookmarks</string>
+			<string>WebBookmarks</string>
+		</array>
+	</dict>
+	<key>com.apple.WirelessRadioManager</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>WIFI</string>
+			<string>WIFI</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>WirelessRadioManager</string>
+			<string>WirelessRadioManager</string>
+		</array>
+	</dict>
+	<key>com.apple.absd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Application identifier Fairplay Client Connected #DRM plugin</string>
+			<string>Application identifier Fairplay Client Connected #DRM plugin</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>absd</string>
+			<string>absd</string>
+		</array>
+	</dict>
+	<key>com.apple.absd.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Application identifier Fairplay Client Connected #DRM plugin</string>
+			<string>Application identifier Fairplay Client Connected #DRM plugin</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Fairplay</string>
+			<string>Fairplay</string>
+		</array>
+	</dict>
+	<key>com.apple.accessibility.heard</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Hearing aid accessability</string>
+			<string>Hearing aid accessability</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>heard</string>
+			<string>heard</string>
+		</array>
+	</dict>
+	<key>com.apple.accessoryd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Handle accessories via USB / Lightning,  Removing this will make accessories such as docks and other cables not be able to do anything except charge</string>
+			<string>USB/Lightning配件</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>accessoryd</string>
+			<string>accessoryd</string>
+		</array>
+	</dict>
+	<key>com.apple.accountsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Accountsd is a daemon, part of the Accounts framework. Apple's developer documentation says this framework helps users access and manage their external accounts from within apps, without requiring them to enter login credentials</string>
+			<string>Accountsd is a daemon, part of the Accounts framework. Apple's developer documentation says this framework helps users access and manage their external accounts from within apps, without requiring them to enter login credentials</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>accountsd</string>
+			<string>accountsd</string>
+		</array>
+	</dict>
+	<key>com.apple.accountsd.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Part of the Accounts framework. Apple's developer documentation says this framework helps users access and manage their external accounts from within apps, without requiring them to enter login credentials</string>
+			<string>系统帐户服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Account</string>
+			<string>Account</string>
+		</array>
+	</dict>
+	<key>com.apple.afcd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>AFC (Apple File Conduit) is a service that runs on every iPhone / iPod, which iTunes uses to exchange files with the device. It is jailed to the directory /private/var/mobile/Media, which is on the second (non-OS) partition. The AFC service is handled by /usr/libexec/afcd, and runs over the usbmux protocol</string>
+			<string>AFC</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AFC</string>
+			<string>AFC</string>
+		</array>
+	</dict>
+	<key>com.apple.aggregate</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Create aggregate logs</string>
+			<string>Create aggregate logs</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>aggregate</string>
+			<string>aggregate</string>
+		</array>
+	</dict>
+	<key>com.apple.aggregated</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Create aggregate logs</string>
+			<string>Aggregate日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Aggregate</string>
+			<string>Aggregate</string>
+		</array>
+	</dict>
+	<key>com.apple.airtunesd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iTunes library sharing</string>
+			<string>iTunes library sharing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>airtunesd</string>
+			<string>airtunesd</string>
+		</array>
+	</dict>
+	<key>com.apple.akd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>AuthKit</string>
+			<string>AuthKit</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AuthKit</string>
+			<string>AuthKit</string>
+		</array>
+	</dict>
+	<key>com.apple.and</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>keyboardlayout</string>
+			<string>keyboardlayout</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>and</string>
+			<string>and</string>
+		</array>
+	</dict>
+	<key>com.apple.ap.adprivacyd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iAd privacy</string>
+			<string>iAd privacy</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>adprivacyd</string>
+			<string>adprivacyd</string>
+		</array>
+	</dict>
+	<key>com.apple.ap.adservicesd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iAd services</string>
+			<string>iAd services</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>adservicesd</string>
+			<string>adservicesd</string>
+		</array>
+	</dict>
+	<key>com.apple.applecamerad</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Camera handler</string>
+			<string>Camera handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>applecamerad</string>
+			<string>applecamerad</string>
+		</array>
+	</dict>
+	<key>com.apple.appstored</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>App Store</string>
+			<string>App Store</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>appstored</string>
+			<string>appstored</string>
+		</array>
+	</dict>
+	<key>com.apple.apsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Push Service</string>
+			<string>Apple推送</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Apple Push</string>
+			<string>Apple Push</string>
+		</array>
+	</dict>
+	<key>com.apple.asd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>daemon</string>
+			<string>daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>asd</string>
+			<string>asd</string>
+		</array>
+	</dict>
+	<key>com.apple.askpermissiond</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>It is a security/safety process that detects if the user should be asked for permission by password or other notification</string>
+			<string>It is a security/safety process that detects if the user should be asked for permission by password or other notification</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>askpermission</string>
+			<string>askpermission</string>
+		</array>
+	</dict>
+	<key>com.apple.aslmanager</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple System Log</string>
+			<string>系统日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>AslManager</string>
+			<string>AslManager</string>
+		</array>
+	</dict>
+	<key>com.apple.assertion_agent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Create power assertion to prevent different kinds of sleep</string>
+			<string>Create power assertion to prevent different kinds of sleep</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>assertion_agent</string>
+			<string>assertion_agent</string>
+		</array>
+	</dict>
+	<key>com.apple.assertiond</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Assertiond is the iOS system daemon responsible for monitoring application performance and access rights at runtime. Two things it monitors are the wall-clock time and the CPU time a process has access to</string>
+			<string>Assertiond is the iOS system daemon responsible for monitoring application performance and access rights at runtime. Two things it monitors are the wall-clock time and the CPU time a process has access to</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>assertiond</string>
+			<string>assertiond</string>
+		</array>
+	</dict>
+	<key>com.apple.assetsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>System assets as photos and videos</string>
+			<string>系统相册资源</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Album assets</string>
+			<string>系统相册资源</string>
+		</array>
+	</dict>
+	<key>com.apple.assistivetouchd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>A funtional shortcutbutton that is draggable anywhere on the homescreen</string>
+			<string>A funtional shortcutbutton that is draggable anywhere on the homescreen</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>assistivetouchd</string>
+			<string>assistivetouchd</string>
+		</array>
+	</dict>
+	<key>com.apple.atc</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Air Traffic Control</string>
+			<string>隔空投送</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ATC</string>
+			<string>ATC</string>
+		</array>
+	</dict>
+	<key>com.apple.atc.atwakeup</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>ATWAKEUP daemon sends a ping (aka signal) approximately every 10 seconds to any "sleeping" paired Bluetooth media device to wake it up...just in case you press the "Play" button in either the control center or multitasking view</string>
+			<string>ATWAKEUP daemon sends a ping (aka signal) approximately every 10 seconds to any "sleeping" paired Bluetooth media device to wake it up...just in case you press the "Play" button in either the control center or multitasking view</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>atwakeup</string>
+			<string>atwakeup</string>
+		</array>
+	</dict>
+	<key>com.apple.avatarsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iMessage / iCloud profile photos</string>
+			<string>iMessage / iCloud profile photos</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>avatarsd</string>
+			<string>avatarsd</string>
+		</array>
+	</dict>
+	<key>com.apple.awdd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Wireless Diagnostics Daemon</string>
+			<string>Apple WiFi诊断</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Wireless Diagnostics</string>
+			<string>WiFi诊断</string>
+		</array>
+	</dict>
+	<key>com.apple.backboardd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>BackBoard, is a daemon introduced in iOS 6 to take some of the workload off of SpringBoard. Its chief purpose is to handle events from the hardware, such as touches, button presses, and accelerometer information.</string>
+			<string>系统后台服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>BackBoard</string>
+			<string>BackBoard</string>
+		</array>
+	</dict>
+	<key>com.apple.backupd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>backupd daemon backs up your files every hour, meaning that when your Time Machine backup is running, you'll notice backupd using up some CPU and memory</string>
+			<string>iTunes/iCloud备份</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iTunes/iCloud Backup</string>
+			<string>iTunes/iCloud备份</string>
+		</array>
+	</dict>
+	<key>com.apple.biometrickitd.pearl</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>FaceID</string>
+			<string>FaceID</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pearl</string>
+			<string>pearl</string>
+		</array>
+	</dict>
+	<key>com.apple.bird</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iCloud Documents</string>
+			<string>iCloud Documents</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iCloud</string>
+			<string>iCloud</string>
+		</array>
+	</dict>
+	<key>com.apple.bluetoothd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Bluetooth</string>
+			<string>蓝牙</string>
+		</array>
+	</dict>
+	<key>com.apple.bookassetd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>seems to be tied to the download of books with the app "books"</string>
+			<string>seems to be tied to the download of books with the app "books"</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>bookassetd</string>
+			<string>bookassetd</string>
+		</array>
+	</dict>
+	<key>com.apple.calaccessd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Calender</string>
+			<string>日历</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Calender</string>
+			<string>日历</string>
+		</array>
+	</dict>
+	<key>com.apple.captiveagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Handle captive WiFi login</string>
+			<string>Handle captive WiFi login</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>captiveagent</string>
+			<string>captiveagent</string>
+		</array>
+	</dict>
+	<key>com.apple.cdpd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>tied to account and login services "probably a securityservice"</string>
+			<string>tied to account and login services "probably a securityservice"</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cdpd</string>
+			<string>cdpd</string>
+		</array>
+	</dict>
+	<key>com.apple.certui.relay</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>When you are on a public network (likemy school) and Safari can't verify what website it is connecting to, it will say"This website is not verified" or something like that, and asks if you want tostill continue. Feel free to delete this.</string>
+			<string>When you are on a public network (likemy school) and Safari can't verify what website it is connecting to, it will say"This website is not verified" or something like that, and asks if you want tostill continue. Feel free to delete this.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>relay</string>
+			<string>relay</string>
+		</array>
+	</dict>
+	<key>com.apple.cfnetwork.cfnetworkagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Core Foundation networking</string>
+			<string>Core Foundation networking</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cfnetworkagent</string>
+			<string>cfnetworkagent</string>
+		</array>
+	</dict>
+	<key>com.apple.cfnetworkagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Core Foundation networking</string>
+			<string>Core Foundation networking</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cfnetworkagent</string>
+			<string>cfnetworkagent</string>
+		</array>
+	</dict>
+	<key>com.apple.cfprefsd.xpc.daemon</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Core Foundation preference sync</string>
+			<string>Core Foundation preference sync</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>daemon</string>
+			<string>daemon</string>
+		</array>
+	</dict>
+	<key>com.apple.cloudd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iCloud</string>
+			<string>iCloud</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cloudd</string>
+			<string>cloudd</string>
+		</array>
+	</dict>
+	<key>com.apple.cloudkeychainproxy3</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>icloud keychain</string>
+			<string>icloud keychain</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cloudkeychainproxy3</string>
+			<string>cloudkeychainproxy3</string>
+		</array>
+	</dict>
+	<key>com.apple.cloudkeychianproxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iCloud Keychain</string>
+			<string>iCloud Keychain</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cloudkeychianproxy</string>
+			<string>cloudkeychianproxy</string>
+		</array>
+	</dict>
+	<key>com.apple.cloudpaird</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>icloud related service</string>
+			<string>icloud related service</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cloudpaird</string>
+			<string>cloudpaird</string>
+		</array>
+	</dict>
+	<key>com.apple.cloudphotod</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iCloud photo library</string>
+			<string>iCloud photo library</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cloudphotod</string>
+			<string>cloudphotod</string>
+		</array>
+	</dict>
+	<key>com.apple.cmfsyncagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Communications Filter Synchronization Agent</string>
+			<string>通讯过滤同步中心</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cmfsyncagent</string>
+			<string>cmfsyncagent</string>
+		</array>
+	</dict>
+	<key>com.apple.companion_proxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>handles connections to certain other devices using ports</string>
+			<string>handles connections to certain other devices using ports</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>companion_proxy</string>
+			<string>companion_proxy</string>
+		</array>
+	</dict>
+	<key>com.apple.configd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>System Configuration Server, which means it monitors and reports on your Mac’s settings and status</string>
+			<string>系统配置</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>configd</string>
+			<string>configd</string>
+		</array>
+	</dict>
+	<key>com.apple.contacts donation agent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Provide contacts from a sync provider</string>
+			<string>Provide contacts from a sync provider</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>contacts donation agent</string>
+			<string>contacts donation agent</string>
+		</array>
+	</dict>
+	<key>com.apple.contacts.donation-agent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Provide contacts from a sync provider</string>
+			<string>Provide contacts from a sync provider</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>donation-agent</string>
+			<string>donation-agent</string>
+		</array>
+	</dict>
+	<key>com.apple.contactsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Contacts handler</string>
+			<string>Contacts handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>contactsd</string>
+			<string>contactsd</string>
+		</array>
+	</dict>
+	<key>com.apple.containermanagerd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Mange App and Group containers</string>
+			<string>Mange App and Group containers</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>containermanagerd</string>
+			<string>containermanagerd</string>
+		</array>
+	</dict>
+	<key>com.apple.contextstored</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>coreduetrelated which means it monitors and reports on your Mac’s settings and status</string>
+			<string>coreduetrelated which means it monitors and reports on your Mac’s settings and status</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>contextstored</string>
+			<string>contextstored</string>
+		</array>
+	</dict>
+	<key>com.apple.corecaptured</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>WiFi/Bluetooth diagnostic capture</string>
+			<string>WiFi/Bluetooth诊断截图</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>corecaptured</string>
+			<string>corecaptured</string>
+		</array>
+	</dict>
+	<key>com.apple.coreduetd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Coreduetd is the daemon that is used to coordinate with your Mac other Apple devices in close proximity, to facilitate Handoff and synchronize with Office 365, iCloud Drive, and similar.</string>
+			<string>Coreduetd is the daemon that is used to coordinate with your Mac other Apple devices in close proximity, to facilitate Handoff and synchronize with Office 365, iCloud Drive, and similar.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>coreduetd</string>
+			<string>coreduetd</string>
+		</array>
+	</dict>
+	<key>com.apple.coreidvd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Daemon for the CoreIDV private framework (probably "identity verification" for Apple Pay)</string>
+			<string>Daemon for the CoreIDV private framework (probably "identity verification" for Apple Pay)</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>coreidvd</string>
+			<string>coreidvd</string>
+		</array>
+	</dict>
+	<key>com.apple.coreparsec.sillhouette</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>part of Siri AI</string>
+			<string>part of Siri AI</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>sillhouette</string>
+			<string>sillhouette</string>
+		</array>
+	</dict>
+	<key>com.apple.coreservices.lsactivity.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>lsactivity controls and helps with testing of the UserActivity featureand frameworks. The tool processes its arguments as command [ options...] [ command [options...]]*</string>
+			<string>lsactivity controls and helps with testing of the UserActivity featureand frameworks. The tool processes its arguments as command [ options...] [ command [options...]]*</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.corespotlightservice.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>spotlight</string>
+			<string>spotlight</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.coresymbolicationd.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Symbolication means replacing memory addresses with symbols (like functions or variables) or for example adding function names and line number information. It is used for debugging and analyzing crash reports.</string>
+			<string>日志崩溃报告</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.cr4shedd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Crashed/ has to do with logging and diagnostics</string>
+			<string>Crashed/ has to do with logging and diagnostics</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cr4shedd</string>
+			<string>cr4shedd</string>
+		</array>
+	</dict>
+	<key>com.apple.crash_mover.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>moves crash logs</string>
+			<string>崩溃日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.crashreportcopymobile.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>copy crash log</string>
+			<string>崩溃日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.cryptotokenkit</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>CryptoTokenKitAccess security tokens and the cryptographic assets they store.You use the CryptoTokenKit framework to easily access cryptographic tokens. Tokens are physical devices built in to the system, located on attached hardware (like a smart card), or accessible through a network connection. Tokens store cryptographic objects like keys and certificates. They also may perform operations—for example, encryption or digital signature verification—using these objects. You use the framework to work with a token’s assets as if they were part of your system, even though they remain secured by the token.</string>
+			<string>CryptoTokenKitAccess security tokens and the cryptographic assets they store.You use the CryptoTokenKit framework to easily access cryptographic tokens. Tokens are physical devices built in to the system, located on attached hardware (like a smart card), or accessible through a network connection. Tokens store cryptographic objects like keys and certificates. They also may perform operations—for example, encryption or digital signature verification—using these objects. You use the framework to work with a token’s assets as if they were part of your system, even though they remain secured by the token.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>cryptotokenkit</string>
+			<string>cryptotokenkit</string>
+		</array>
+	</dict>
+	<key>com.apple.ctkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Cloud Token Kit daemon</string>
+			<string>Cloud Token Kit daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ctkd</string>
+			<string>ctkd</string>
+		</array>
+	</dict>
+	<key>com.apple.ctkd.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Cloud Token Kit daemon</string>
+			<string>Cloud Token Kit daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.dasd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Duet Activity Scheduler Daemon (related to DuetActivityScheduler.framework)</string>
+			<string>Duet Activity Scheduler Daemon (related to DuetActivityScheduler.framework)</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>dasd</string>
+			<string>dasd</string>
+		</array>
+	</dict>
+	<key>com.apple.dasd.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Duet Activity Scheduler (DAS) maintains a scored list of background activities which usually consists of more than seventy items. Periodically, it rescores each item in its list, according to various criteria such as whether it is now due to be performed, i.e. clock time is now within the time period in which Centralized Task Scheduling (CTS) calculated it should next be run.</string>
+			<string>Duet Activity Scheduler (DAS) maintains a scored list of background activities which usually consists of more than seventy items. Periodically, it rescores each item in its list, according to various criteria such as whether it is now due to be performed, i.e. clock time is now within the time period in which Centralized Task Scheduling (CTS) calculated it should next be run.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>plist</string>
+			<string>plist</string>
+		</array>
+	</dict>
+	<key>com.apple.dataaccessd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>his daemon deals with syncing with Exchange and Google Sync</string>
+			<string>his daemon deals with syncing with Exchange and Google Sync</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>dataaccessd</string>
+			<string>dataaccessd</string>
+		</array>
+	</dict>
+	<key>com.apple.datamigrator</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Handles data conversion after OS update</string>
+			<string>Handles data conversion after OS update</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>datamigrator</string>
+			<string>datamigrator</string>
+		</array>
+	</dict>
+	<key>com.apple.defragd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Defragment for APFS</string>
+			<string>Defragment for APFS</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>defragd</string>
+			<string>defragd</string>
+		</array>
+	</dict>
+	<key>com.apple.destinationd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>maps destination service</string>
+			<string>maps destination service</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>destinationd</string>
+			<string>destinationd</string>
+		</array>
+	</dict>
+	<key>com.apple.device-o-matic</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Figure out what profile to present when the device is connected via USB</string>
+			<string>Figure out what profile to present when the device is connected via USB</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>device-o-matic</string>
+			<string>device-o-matic</string>
+		</array>
+	</dict>
+	<key>com.apple.devicecheckd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DeviceCheck</string>
+			<string>DeviceCheck</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>devicecheckd</string>
+			<string>devicecheckd</string>
+		</array>
+	</dict>
+	<key>com.apple.diagnosticd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Diagnostics</string>
+			<string>Diagnostics</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>diagnosticd</string>
+			<string>diagnosticd</string>
+		</array>
+	</dict>
+	<key>com.apple.diagnosticextensionsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Manage diagnostic extensions</string>
+			<string>Manage diagnostic extensions</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>diagnosticextensionsd</string>
+			<string>diagnosticextensionsd</string>
+		</array>
+	</dict>
+	<key>com.apple.distnoted</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Distributed notificaions Distnoted is a system message notification process. Often Distnoted will go wild when another process crashes. This other process is what distnoted is attempting to processs the system message for. Locum is an example of a process that sometimes crashes and is tied to finder.</string>
+			<string>Distributed notificaions Distnoted is a system message notification process. Often Distnoted will go wild when another process crashes. This other process is what distnoted is attempting to processs the system message for. Locum is an example of a process that sometimes crashes and is tied to finder.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>distnoted</string>
+			<string>distnoted</string>
+		</array>
+	</dict>
+	<key>com.apple.distnoted.xpc.daemon</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Distributed notificaions</string>
+			<string>Distributed notificaions</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>daemon</string>
+			<string>daemon</string>
+		</array>
+	</dict>
+	<key>com.apple.dmd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>YNOPSISremotemanagementdDESCRIPTIONremotemanagementd handles HTTP communication with an Mobile Device Management (MDM) Version 2 server, delivering configuration information tothe local Device Management daemon (dmd), and sending status messages back to the server.</string>
+			<string>YNOPSISremotemanagementdDESCRIPTIONremotemanagementd handles HTTP communication with an Mobile Device Management (MDM) Version 2 server, delivering configuration information tothe local Device Management daemon (dmd), and sending status messages back to the server.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>dmd</string>
+			<string>dmd</string>
+		</array>
+	</dict>
+	<key>com.apple.dprivacyd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Differential Privacy</string>
+			<string>Differential Privacy</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>dprivacyd</string>
+			<string>dprivacyd</string>
+		</array>
+	</dict>
+	<key>com.apple.email.maild</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Email daemon</string>
+			<string>Email daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>maild</string>
+			<string>maild</string>
+		</array>
+	</dict>
+	<key>com.apple.exchangesyncd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Exchange mail/contacts handler</string>
+			<string>Exchange mail/contacts handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>exchangesyncd</string>
+			<string>exchangesyncd</string>
+		</array>
+	</dict>
+	<key>com.apple.facebook.xpc</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Facebook account handler</string>
+			<string>Facebook account handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>xpc</string>
+			<string>xpc</string>
+		</array>
+	</dict>
+	<key>com.apple.familycircled</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iCloud Family Management</string>
+			<string>iCloud Family Management</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>familycircled</string>
+			<string>familycircled</string>
+		</array>
+	</dict>
+	<key>com.apple.familynotificaiton</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Notify UI for family events</string>
+			<string>Notify UI for family events</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>familynotificaiton</string>
+			<string>familynotificaiton</string>
+		</array>
+	</dict>
+	<key>com.apple.familynotificationd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>notification about family control "kid lock"</string>
+			<string>notification about family control "kid lock"</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>familynotificationd</string>
+			<string>familynotificationd</string>
+		</array>
+	</dict>
+	<key>com.apple.fdrhelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Factory Data Reset</string>
+			<string>Factory Data Reset</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fdrhelper</string>
+			<string>fdrhelper</string>
+		</array>
+	</dict>
+	<key>com.apple.filesystems.apfs_defragd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Defragment for APFS</string>
+			<string>Defragment for APFS</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>apfs_defragd</string>
+			<string>apfs_defragd</string>
+		</array>
+	</dict>
+	<key>com.apple.filesystems.livefileproviderd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Files.app service</string>
+			<string>Files.app service</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>livefileproviderd</string>
+			<string>livefileproviderd</string>
+		</array>
+	</dict>
+	<key>com.apple.filesystems.smbclientd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Server Message Block client</string>
+			<string>Server Message Block client</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>smbclientd</string>
+			<string>smbclientd</string>
+		</array>
+	</dict>
+	<key>com.apple.findmydeviced</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>find my iphone</string>
+			<string>find my iphone</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>findmydeviced</string>
+			<string>findmydeviced</string>
+		</array>
+	</dict>
+	<key>com.apple.fmfd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Find my friends</string>
+			<string>Find my friends</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fmfd</string>
+			<string>fmfd</string>
+		</array>
+	</dict>
+	<key>com.apple.fmflocatord</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Find my friends</string>
+			<string>Find my friends</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fmflocatord</string>
+			<string>fmflocatord</string>
+		</array>
+	</dict>
+	<key>com.apple.followupd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>This looks like it's involved in the mechanics of notifications on a low level</string>
+			<string>This looks like it's involved in the mechanics of notifications on a low level</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>followupd</string>
+			<string>followupd</string>
+		</array>
+	</dict>
+	<key>com.apple.fs_task_scheduler</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>filesystem task scheduler</string>
+			<string>filesystem task scheduler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fs_task_scheduler</string>
+			<string>fs_task_scheduler</string>
+		</array>
+	</dict>
+	<key>com.apple.fseventsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Filesystem events</string>
+			<string>Filesystem events</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fseventsd</string>
+			<string>fseventsd</string>
+		</array>
+	</dict>
+	<key>com.apple.ftp-proxy-embedded</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>File Transfer Protocol, keep this on</string>
+			<string>File Transfer Protocol, keep this on</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ftp-proxy-embedded</string>
+			<string>ftp-proxy-embedded</string>
+		</array>
+	</dict>
+	<key>com.apple.gamed</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>GameCenter</string>
+			<string>GameCenter</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>gamed</string>
+			<string>gamed</string>
+		</array>
+	</dict>
+	<key>com.apple.geocorrectiond</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>GPS/Telemetry related</string>
+			<string>GPS/Telemetry related</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>geocorrectiond</string>
+			<string>geocorrectiond</string>
+		</array>
+	</dict>
+	<key>com.apple.geod</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Geo-fencing</string>
+			<string>Geo-fencing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>geod</string>
+			<string>geod</string>
+		</array>
+	</dict>
+	<key>com.apple.gpsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>GPS</string>
+			<string>GPS</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>gpsd</string>
+			<string>gpsd</string>
+		</array>
+	</dict>
+	<key>com.apple.handwritingd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iPad Handwriting Recogntion</string>
+			<string>iPad Handwriting Recogntion</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>handwritingd</string>
+			<string>handwritingd</string>
+		</array>
+	</dict>
+	<key>com.apple.hangreporter</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>logging of unactive apps "unactive apps are spinning, and will be sampled by spindump tool to dump logs"</string>
+			<string>logging of unactive apps "unactive apps are spinning, and will be sampled by spindump tool to dump logs"</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>hangreporter</string>
+			<string>hangreporter</string>
+		</array>
+	</dict>
+	<key>com.apple.hangtracerd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>logger</string>
+			<string>logger</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>hangtracerd</string>
+			<string>hangtracerd</string>
+		</array>
+	</dict>
+	<key>com.apple.healthappd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Health App</string>
+			<string>Health App</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>healthappd</string>
+			<string>healthappd</string>
+		</array>
+	</dict>
+	<key>com.apple.healthd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>HealthKit</string>
+			<string>HealthKit</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>healthd</string>
+			<string>healthd</string>
+		</array>
+	</dict>
+	<key>com.apple.homed</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>HomeKit</string>
+			<string>HomeKit</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>homed</string>
+			<string>homed</string>
+		</array>
+	</dict>
+	<key>com.apple.hostapd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>user space daemon for access points, including, e.g., IEEE 802.1X/WPA/EAP Authenticator for number of Linux and BSD drivers</string>
+			<string>user space daemon for access points, including, e.g., IEEE 802.1X/WPA/EAP Authenticator for number of Linux and BSD drivers</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>hostapd</string>
+			<string>hostapd</string>
+		</array>
+	</dict>
+	<key>com.apple.house_arreset</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iTunes file transfer for application documents</string>
+			<string>iTunes file transfer for application documents</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>house_arreset</string>
+			<string>house_arreset</string>
+		</array>
+	</dict>
+	<key>com.apple.hpfd.mobile.plist</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>电话服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>hpfd</string>
+			<string>hpfd</string>
+		</array>
+	</dict>
+	<key>com.apple.iap2d</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>USB 2.0 Acessory ON/OFF</string>
+			<string>USB 2.0 Acessory ON/OFF</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iap2d</string>
+			<string>iap2d</string>
+		</array>
+	</dict>
+	<key>com.apple.iapauthd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iAccessory authentication</string>
+			<string>iAccessory authentication</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iapauthd</string>
+			<string>iapauthd</string>
+		</array>
+	</dict>
+	<key>com.apple.iapd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iAccessory Protocol handler</string>
+			<string>iAccessory Protocol handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iapd</string>
+			<string>iapd</string>
+		</array>
+	</dict>
+	<key>com.apple.iaptransportd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iAccessory</string>
+			<string>iAccessory</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iaptransportd</string>
+			<string>iaptransportd</string>
+		</array>
+	</dict>
+	<key>com.apple.icloud.findmydeviced</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Find my iPhone</string>
+			<string>Find my iPhone</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>findmydeviced</string>
+			<string>findmydeviced</string>
+		</array>
+	</dict>
+	<key>com.apple.icloud.fmfd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Find my friends</string>
+			<string>Find my friends</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fmfd</string>
+			<string>fmfd</string>
+		</array>
+	</dict>
+	<key>com.apple.icloud.fmflocatord</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Find my friends</string>
+			<string>Find my friends</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fmflocatord</string>
+			<string>fmflocatord</string>
+		</array>
+	</dict>
+	<key>com.apple.icloud.searchpartyd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Offline Find-My</string>
+			<string>Offline Find-My</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>searchpartyd</string>
+			<string>searchpartyd</string>
+		</array>
+	</dict>
+	<key>com.apple.identityservicesd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>identityservicesd is a background process (Identity Services Daemon) that deals with third-party credentials</string>
+			<string>身份验证服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>identityservicesd</string>
+			<string>identityservicesd</string>
+		</array>
+	</dict>
+	<key>com.apple.idscredentialsagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>identity services</string>
+			<string>identity services</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>idscredentialsagent</string>
+			<string>idscredentialsagent</string>
+		</array>
+	</dict>
+	<key>com.apple.idsfoundation.IDSRemoteURLConnectionAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Make URL requests under identity services without exposing credential</string>
+			<string>Make URL requests under identity services without exposing credential</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>IDSRemoteURLConnectionAgent</string>
+			<string>IDSRemoteURLConnectionAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.idsremoteurlconnectionagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>That software is ready to make any Instant Messaging connections you decide to make.</string>
+			<string>That software is ready to make any Instant Messaging connections you decide to make.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>idsremoteurlconnectionagent</string>
+			<string>idsremoteurlconnectionagent</string>
+		</array>
+	</dict>
+	<key>com.apple.imagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Instant Message Agent (iMessage)</string>
+			<string>Instant Message Agent (iMessage)</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imagent</string>
+			<string>imagent</string>
+		</array>
+	</dict>
+	<key>com.apple.imautomatichistorydeletionagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>?</string>
+			<string>?</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imautomatichistorydeletionagent</string>
+			<string>imautomatichistorydeletionagent</string>
+		</array>
+	</dict>
+	<key>com.apple.imautomatischistorydeletionagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iMessage History Deletion Agent</string>
+			<string>iMessage History Deletion Agent</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imautomatischistorydeletionagent</string>
+			<string>imautomatischistorydeletionagent</string>
+		</array>
+	</dict>
+	<key>com.apple.imavagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>彩信</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imavagent</string>
+			<string>imavagent</string>
+		</array>
+	</dict>
+	<key>com.apple.imcore.imtransferagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iMessage attachment handler</string>
+			<string>iMessage attachment handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imtransferagent</string>
+			<string>imtransferagent</string>
+		</array>
+	</dict>
+	<key>com.apple.imdpersistance</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>IMDPersistenceAgent. It tells you that it is part of Messages application. It provides a background process for persistent messaging to notification center and other items, especially Facetime. If you don't use any of that, go ahead and kill it but it will come back if you've enabled any messaging protocols.</string>
+			<string>IMDPersistenceAgent. It tells you that it is part of Messages application. It provides a background process for persistent messaging to notification center and other items, especially Facetime. If you don't use any of that, go ahead and kill it but it will come back if you've enabled any messaging protocols.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imdpersistance</string>
+			<string>imdpersistance</string>
+		</array>
+	</dict>
+	<key>com.apple.IMLoggingAgent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>即时通讯记录中心</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>IMLoggingAgent</string>
+			<string>IMLoggingAgent</string>
+		</array>
+	</dict>
+	<key>com.apple.imtransferagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iMessage attachment handler</string>
+			<string>iMessage attachment handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>imtransferagent</string>
+			<string>imtransferagent</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.installation_proxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Manages applications on a device. [most likely needed]</string>
+			<string>Manages applications on a device. [most likely needed]</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>installation_proxy</string>
+			<string>installation_proxy</string>
+		</array>
+	</dict>
+	<key>com.apple.installcoordinationd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>installation software for installing apps</string>
+			<string>installation software for installing apps</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>installcoordinationd</string>
+			<string>installcoordinationd</string>
+		</array>
+	</dict>
+	<key>com.apple.installd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Mandatory for Appstore, probably installation software</string>
+			<string>Mandatory for Appstore, probably installation software</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>installd</string>
+			<string>installd</string>
+		</array>
+	</dict>
+	<key>com.apple.iomfb_bics_daemon</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>maybe needed for banking apps and other apps</string>
+			<string>maybe needed for banking apps and other apps</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iomfb_bics_daemon</string>
+			<string>iomfb_bics_daemon</string>
+		</array>
+	</dict>
+	<key>com.apple.iosdiagnosticsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iOS Diagnostics is an Apple internal application. It is the iOS equivalent of an internal Apple OS X application named "Behavior Scan", used at the Genius Bar to detect and test different aspects of the device. ... app, and the diagnostic data is sent over the air to the genius' device</string>
+			<string>iOS Diagnostics is an Apple internal application. It is the iOS equivalent of an internal Apple OS X application named "Behavior Scan", used at the Genius Bar to detect and test different aspects of the device. ... app, and the diagnostic data is sent over the air to the genius' device</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>iosdiagnosticsd</string>
+			<string>iosdiagnosticsd</string>
+		</array>
+	</dict>
+	<key>com.apple.itunescloudd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iTunes cloud and Home Sharing</string>
+			<string>iTunes cloud and Home Sharing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>itunescloudd</string>
+			<string>itunescloudd</string>
+		</array>
+	</dict>
+	<key>com.apple.itunesstored</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Mandatory for Appstore</string>
+			<string>Mandatory for Appstore</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>itunesstored</string>
+			<string>itunesstored</string>
+		</array>
+	</dict>
+	<key>com.apple.jetsamproperties.N94</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Process memory control</string>
+			<string>进程内存管理</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>jetsam</string>
+			<string>jetsam</string>
+		</array>
+	</dict>
+	<key>com.apple.keybagd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Keybagd is a service that first appeared on iOS, and was used to control access to encrypted user data based on device state- some data can still be unencrypted while the device remains locked, but other data cannot. It's since migrated into macOS.</string>
+			<string>Keybagd is a service that first appeared on iOS, and was used to control access to encrypted user data based on device state- some data can still be unencrypted while the device remains locked, but other data cannot. It's since migrated into macOS.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>keybagd</string>
+			<string>keybagd</string>
+		</array>
+	</dict>
+	<key>com.apple.librariand</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>状态栏横幅通知</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>librariand</string>
+			<string>librariand</string>
+		</array>
+	</dict>
+	<key>com.apple.languageassetd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>may be related to Siri try to leave on</string>
+			<string>may be related to Siri try to leave on</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>languageassetd</string>
+			<string>languageassetd</string>
+		</array>
+	</dict>
+	<key>com.apple.libnotificationd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DEBUGGING Disable used by cr4shed</string>
+			<string>DEBUGGING Disable used by cr4shed</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>libnotificationd</string>
+			<string>libnotificationd</string>
+		</array>
+	</dict>
+	<key>com.apple.locationd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Location services</string>
+			<string>GPS定位</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>locationd</string>
+			<string>locationd</string>
+		</array>
+	</dict>
+	<key>com.apple.lockdown</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>lockdownd</string>
+			<string>lockdownd</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>lockdown</string>
+			<string>lockdown</string>
+		</array>
+	</dict>
+	<key>com.apple.logd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Logging Daemon</string>
+			<string>Logging Daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>logd</string>
+			<string>logd</string>
+		</array>
+	</dict>
+	<key>com.apple.lsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Launch Services daemon</string>
+			<string>Launch Services daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>lsd</string>
+			<string>lsd</string>
+		</array>
+	</dict>
+	<key>com.apple.lskdd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Local System Kernel Debug Daemon?</string>
+			<string>Local System Kernel Debug Daemon?</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>lskdd</string>
+			<string>lskdd</string>
+		</array>
+	</dict>
+	<key>com.apple.lskdmsed</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Local System Kernel Debug Memory Daemon?</string>
+			<string>Local System Kernel Debug Memory Daemon?</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>lskdmsed</string>
+			<string>lskdmsed</string>
+		</array>
+	</dict>
+	<key>com.apple.mDNSResponder.reloaded</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DNS</string>
+			<string>DNS</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DNS</string>
+			<string>DNS</string>
+		</array>
+	</dict>
+	<key>com.apple.mDNSResponderHelper.reloaded</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DNS</string>
+			<string>DNS</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>DNS</string>
+			<string>DNS</string>
+		</array>
+	</dict>
+	<key>com.apple.mDNSResponer</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Behövs för Webbsidor mDNSResponder, is a core part of the Bonjour protocol. Bonjour is Apple’s zero-configuration networking service, which basically means it’s how Apple devices find each other on a network. Our process, mDNSResponder, regularly scans your local network looking for other Bonjour-enabled devices.</string>
+			<string>Behövs för Webbsidor mDNSResponder, is a core part of the Bonjour protocol. Bonjour is Apple’s zero-configuration networking service, which basically means it’s how Apple devices find each other on a network. Our process, mDNSResponder, regularly scans your local network looking for other Bonjour-enabled devices.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mDNSResponer</string>
+			<string>mDNSResponer</string>
+		</array>
+	</dict>
+	<key>com.apple.managedconfiguration -mdm</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Mobile Device Manager daemon</string>
+			<string>Mobile Device Manager daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>managedconfiguration -mdm</string>
+			<string>managedconfiguration -mdm</string>
+		</array>
+	</dict>
+	<key>com.apple.managedconfiguration-profile</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>.mobileprofile management</string>
+			<string>.mobileprofile management</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>managedconfiguration-profile</string>
+			<string>managedconfiguration-profile</string>
+		</array>
+	</dict>
+	<key>com.apple.managedconfiguration.mdmd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Mobile Device Manager daemon</string>
+			<string>Mobile Device Manager daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mdmd</string>
+			<string>mdmd</string>
+		</array>
+	</dict>
+	<key>com.apple.managedconfiguration.passscodenagd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Tells you to set a passcode if set from policy</string>
+			<string>Tells you to set a passcode if set from policy</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>passscodenagd</string>
+			<string>passscodenagd</string>
+		</array>
+	</dict>
+	<key>com.apple.managedconfiguration.profiled</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>.mobileprofile management</string>
+			<string>.mobileprofile management</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>profiled</string>
+			<string>profiled</string>
+		</array>
+	</dict>
+	<key>com.apple.mediaanalysisd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>used for videos and photos maybe</string>
+			<string>used for videos and photos maybe</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mediaanalysisd</string>
+			<string>mediaanalysisd</string>
+		</array>
+	</dict>
+	<key>com.apple.mediaartworkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iTunes Cover Art</string>
+			<string>iTunes Cover Art</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mediaartworkd</string>
+			<string>mediaartworkd</string>
+		</array>
+	</dict>
+	<key>com.apple.medialibraryd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iTunes</string>
+			<string>iTunes</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>medialibraryd</string>
+			<string>medialibraryd</string>
+		</array>
+	</dict>
+	<key>com.apple.mediaremoted</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>MediaRemote is a framework that is used to communicate with the media server, mediaserverd. It can be utilized to query the server for now playing information, play or pause the current song, skip 15 seconds, etc.</string>
+			<string>声音远程控制</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mediaremoted</string>
+			<string>mediaremoted</string>
+		</array>
+	</dict>
+	<key>com.apple.mediaserverd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>MediaRemote is a framework that is used to communicate with the media server, mediaserverd. It can be utilized to query the server for now playing information, play or pause the current song, skip 15 seconds, etc.</string>
+			<string>音乐视频播放相关</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mediaserverd</string>
+			<string>mediaserverd</string>
+		</array>
+	</dict>
+	<key>com.apple.mediastream.mstreamd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>icloud照片流相关</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mstreamd</string>
+			<string>mstreamd</string>
+		</array>
+	</dict>
+	<key>com.apple.memory-maintenance</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>probably cleans RAM or something</string>
+			<string>probably cleans RAM or something</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>memory-maintenance</string>
+			<string>memory-maintenance</string>
+		</array>
+	</dict>
+	<key>com.apple.midiserver-ios</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>midi such as MIDI</string>
+			<string>midi such as MIDI</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>midiserver-ios</string>
+			<string>midiserver-ios</string>
+		</array>
+	</dict>
+	<key>com.apple.migrationpluginwrapper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Environment for OS upgrade migration plugins to run in</string>
+			<string>Environment for OS upgrade migration plugins to run in</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>migrationpluginwrapper</string>
+			<string>migrationpluginwrapper</string>
+		</array>
+	</dict>
+	<key>com.apple.misagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Provisioning profiles</string>
+			<string>Provisioning profiles</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>misagent</string>
+			<string>misagent</string>
+		</array>
+	</dict>
+	<key>com.apple.mlmodelingd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Machine Learning modeling daemon</string>
+			<string>Machine Learning modeling daemon</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mlmodelingd</string>
+			<string>mlmodelingd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.accessory_device_arbitrator</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>外接附件仲裁器</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>accessory_device_arbitrator</string>
+			<string>accessory_device_arbitrator</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.assertion_agent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>系统安全辅助</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>assertion_agent</string>
+			<string>assertion_agent</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.audio_device_arbitrator</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>外接音频设备仲裁器</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>audio_device_arbitrator</string>
+			<string>audio_device_arbitrator</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.deleted</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>滑动删除相关</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>deleted</string>
+			<string>deleted</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.fud</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>配件更新识别</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>fud</string>
+			<string>fud</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.insecure_notification_proxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>不安全通知</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>insecure_notification_proxy</string>
+			<string>insecure_notification_proxy</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.installd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Install service</string>
+			<string>安装服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>installd</string>
+			<string>installd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.keybagd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>设备密码</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>keybagd</string>
+			<string>keybagd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.MCInstall</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>.mobileconfig management</string>
+			<string>.mobileconfig management</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>MCInstall</string>
+			<string>MCInstall</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.obliteration</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Erase device via AppleEffacableStorage</string>
+			<string>Erase device via AppleEffacableStorage</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>obliteration</string>
+			<string>obliteration</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.vendor_device_arbitrator</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>第三方供应商仲裁器</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>vendor_device_arbitrator</string>
+			<string>vendor_device_arbitrator</string>
+		</array>
+	</dict>
+	<key>com.apple.mobileactivationd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Activation services. If you disable this, you may get temporary de-activation of your device, among other things.</string>
+			<string>Activation services. If you disable this, you may get temporary de-activation of your device, among other things.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobileactivationd</string>
+			<string>mobileactivationd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobileassetd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Mobileassetd is the daemon in charge of managing and downloading assets when other apps ask for them. Examples: dictionaries (for the user to see definitions of words), fonts, time zone database, firmware for accessories, voice recognition data for the Hey Siri feature, and OTA updates of the iOS firmware.I would recommend killing this daemon using CocoaTop and hopefully the issue should be fixed.</string>
+			<string>Mobileassetd is the daemon in charge of managing and downloading assets when other apps ask for them. Examples: dictionaries (for the user to see definitions of words), fonts, time zone database, firmware for accessories, voice recognition data for the Hey Siri feature, and OTA updates of the iOS firmware.I would recommend killing this daemon using CocoaTop and hopefully the issue should be fixed.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobileassetd</string>
+			<string>mobileassetd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobilecheckpoint</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>dont know, low info, leave alone</string>
+			<string>dont know, low info, leave alone</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobilecheckpoint</string>
+			<string>mobilecheckpoint</string>
+		</array>
+	</dict>
+	<key>com.apple.mobilegestalt</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The libMobileGestalt.dylib, even though technically not a framework per se, it is of utmost importance, as it serves iOS as a central repository for all of the system's properties - both static and runtime. In that, it can be conceived as the parallel of OS X's Gestalt, which is part of CoreServices (in CarbonCore). But similarities end in name only. OS X's Gestalt is somewhat documented (in its header file), and has been effectively deprecared as of 10.8. MobileGestalt is entirely undocumented, and isn't going away any time soon.</string>
+			<string>The libMobileGestalt.dylib, even though technically not a framework per se, it is of utmost importance, as it serves iOS as a central repository for all of the system's properties - both static and runtime. In that, it can be conceived as the parallel of OS X's Gestalt, which is part of CoreServices (in CarbonCore). But similarities end in name only. OS X's Gestalt is somewhat documented (in its header file), and has been effectively deprecared as of 10.8. MobileGestalt is entirely undocumented, and isn't going away any time soon.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobilegestalt</string>
+			<string>mobilegestalt</string>
+		</array>
+	</dict>
+	<key>com.apple.mobilegestalt.xpc</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Get device properties like model / serial</string>
+			<string>Get device properties like model / serial</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>xpc</string>
+			<string>xpc</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile_installation_proxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>软件安装</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobile_installation_proxy</string>
+			<string>mobile_installation_proxy</string>
+		</array>
+	</dict>
+	<key>com.apple.mobilestoredemod</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>storedemo function</string>
+			<string>storedemo function</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobilestoredemod</string>
+			<string>mobilestoredemod</string>
+		</array>
+	</dict>
+	<key>com.apple.mobilestoredemodhelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>storedemo function</string>
+			<string>storedemo function</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobilestoredemodhelper</string>
+			<string>mobilestoredemodhelper</string>
+		</array>
+	</dict>
+	<key>com.apple.mobiletimerd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>alarm clock perhaps</string>
+			<string>alarm clock perhaps</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobiletimerd</string>
+			<string>mobiletimerd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobilewatchdog</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>watchdogd is part of the watchdog infrastructure, it ensures that both the kernel and user spaces are making progress.If the kernel or user space is stuck, a reboot will be triggered by the watchdog infrastructure.</string>
+			<string>watchdogd is part of the watchdog infrastructure, it ensures that both the kernel and user spaces are making progress.If the kernel or user space is stuck, a reboot will be triggered by the watchdog infrastructure.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mobilewatchdog</string>
+			<string>mobilewatchdog</string>
+		</array>
+	</dict>
+	<key>com.apple.monbile.house_arrest</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>iTunes file transfer for application documents</string>
+			<string>iTunes file transfer for application documents</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>house_arrest</string>
+			<string>house_arrest</string>
+		</array>
+	</dict>
+	<key>com.apple.mstreamd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>is the process that transports pictures and video located on apple servers</string>
+			<string>is the process that transports pictures and video located on apple servers</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mstreamd</string>
+			<string>mstreamd</string>
+		</array>
+	</dict>
+	<key>com.apple.mtmergeprops</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>mergeProps is a function that handles combining the props passed directly to a compoment</string>
+			<string>mergeProps is a function that handles combining the props passed directly to a compoment</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>mtmergeprops</string>
+			<string>mtmergeprops</string>
+		</array>
+	</dict>
+	<key>com.apple.nanobackupd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Watch backup agent</string>
+			<string>Apple Watch backup agent</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nanobackupd</string>
+			<string>nanobackupd</string>
+		</array>
+	</dict>
+	<key>com.apple.nanoprefsyncd.2</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Watch preference syncing</string>
+			<string>Apple Watch preference syncing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>2</string>
+			<string>2</string>
+		</array>
+	</dict>
+	<key>com.apple.nanoregistryd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Watch application registry (launch services)</string>
+			<string>Apple Watch application registry (launch services)</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nanoregistryd</string>
+			<string>nanoregistryd</string>
+		</array>
+	</dict>
+	<key>com.apple.nanosubridged</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Watch Software Update Bridge</string>
+			<string>Apple Watch Software Update Bridge</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nanosubridged</string>
+			<string>nanosubridged</string>
+		</array>
+	</dict>
+	<key>com.apple.navd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>connected to gps and maps</string>
+			<string>connected to gps and maps</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>navd</string>
+			<string>navd</string>
+		</array>
+	</dict>
+	<key>com.apple.ndoagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>new device outreach service</string>
+			<string>new device outreach service</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ndoagent</string>
+			<string>ndoagent</string>
+		</array>
+	</dict>
+	<key>com.apple.neagent-ios</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Network Extension - Agent</string>
+			<string>Network Extension - Agent</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>neagent-ios</string>
+			<string>neagent-ios</string>
+		</array>
+	</dict>
+	<key>com.apple.nehelper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Network Extensions</string>
+			<string>Network Extensions</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nehelper</string>
+			<string>nehelper</string>
+		</array>
+	</dict>
+	<key>com.apple.nehelper-embedded</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>nehelper is part of the Network Extension framework. It is responsible for vending the Network Extension configuration to Network Extensionclients and applying changes to the Network Extension configuration.</string>
+			<string>nehelper is part of the Network Extension framework. It is responsible for vending the Network Extension configuration to Network Extensionclients and applying changes to the Network Extension configuration.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nehelper-embedded</string>
+			<string>nehelper-embedded</string>
+		</array>
+	</dict>
+	<key>com.apple.nesessionmanager</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The nesessionmanager daemonIf you look at the implementation of the ne_session_* functions, you will note that these functions are sending their request through XPC to the root dameon nesessionmanager located at the path /usr/libexec/nesessionmanager.This daemon is listening for commands and handles them in the method -(void)[NESMSession handleCommand:fromClient:]. By looking at the logging strings, you can find the code for each command:cstr_00072C74 "%.30s:%-4d %@: Ignore restart command from %@, a pending start command already exists"cstr_00072CCA "%.30s:%-4d %@: Stop current session as requested by an overriding restart command from %@"cstr_00072D7D "%.30s:%-4d %@: Received a start command from %@, but start was rejected"cstr_00072DFD "%.30s:%-4d %@: Received a start command from %@"cstr_00072E2D "%.30s:%-4d %@: Skip a %sstart command from %@: session in state %s"cstr_00072E73 "%.30s:%-4d %@: Received a stop command from %@ with reason %d"cstr_00072F7E "%.30s:%-4d %@: Received an enable on demand command from %@"For example when an IKEv2 service is started, the method -(void)[NESMIKEv2VPNSession createConnectParametersWithStartMessage:] will be called.The architecture of the daemon is out of the scope of this article.</string>
+			<string>The nesessionmanager daemonIf you look at the implementation of the ne_session_* functions, you will note that these functions are sending their request through XPC to the root dameon nesessionmanager located at the path /usr/libexec/nesessionmanager.This daemon is listening for commands and handles them in the method -(void)[NESMSession handleCommand:fromClient:]. By looking at the logging strings, you can find the code for each command:cstr_00072C74 "%.30s:%-4d %@: Ignore restart command from %@, a pending start command already exists"cstr_00072CCA "%.30s:%-4d %@: Stop current session as requested by an overriding restart command from %@"cstr_00072D7D "%.30s:%-4d %@: Received a start command from %@, but start was rejected"cstr_00072DFD "%.30s:%-4d %@: Received a start command from %@"cstr_00072E2D "%.30s:%-4d %@: Skip a %sstart command from %@: session in state %s"cstr_00072E73 "%.30s:%-4d %@: Received a stop command from %@ with reason %d"cstr_00072F7E "%.30s:%-4d %@: Received an enable on demand command from %@"For example when an IKEv2 service is started, the method -(void)[NESMIKEv2VPNSession createConnectParametersWithStartMessage:] will be called.The architecture of the daemon is out of the scope of this article.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nesessionmanager</string>
+			<string>nesessionmanager</string>
+		</array>
+	</dict>
+	<key>com.apple.networkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Network Service</string>
+			<string>网络服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>networkd</string>
+			<string>networkd</string>
+		</array>
+	</dict>
+	<key>com.apple.networkserviceproxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple Network Service Proxy executable</string>
+			<string>Apple Network Service Proxy executable</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>networkserviceproxy</string>
+			<string>networkserviceproxy</string>
+		</array>
+	</dict>
+	<key>com.apple.newsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple News</string>
+			<string>Apple News</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>newsd</string>
+			<string>newsd</string>
+		</array>
+	</dict>
+	<key>com.apple.nfcd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Near Field Communications</string>
+			<string>Near Field Communications</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nfcd</string>
+			<string>nfcd</string>
+		</array>
+	</dict>
+	<key>com.apple.nfsconf</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>NFS</string>
+			<string>NFS</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>NFS</string>
+			<string>NFS</string>
+		</array>
+	</dict>
+	<key>com.apple.nlcd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Network Link Conditioner</string>
+			<string>Network Link Conditioner</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nlcd</string>
+			<string>nlcd</string>
+		</array>
+	</dict>
+	<key>com.apple.notification_proxy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>notification</string>
+			<string>系统通知</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>notification_proxy</string>
+			<string>notification_proxy</string>
+		</array>
+	</dict>
+	<key>com.apple.notifyd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Notification service</string>
+			<string>系统通知服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Notification</string>
+			<string>系统通知</string>
+		</array>
+	</dict>
+	<key>com.apple.nsnetworkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Network</string>
+			<string>网络</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Network</string>
+			<string>Network</string>
+		</array>
+	</dict>
+	<key>com.apple.nsurlsessiond</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>assume Safarirelated and such</string>
+			<string>assume Safarirelated and such</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nsurlsessiond</string>
+			<string>nsurlsessiond</string>
+		</array>
+	</dict>
+	<key>com.apple.nsurlstoraged</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>nsurlstoraged is the daemon that makes this local storage possible. Safari is the main application that actually uses this capability, but a number of other Apple programs also use it: Mail, Calendar, and iCloud,</string>
+			<string>nsurlstoraged is the daemon that makes this local storage possible. Safari is the main application that actually uses this capability, but a number of other Apple programs also use it: Mail, Calendar, and iCloud,</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>nsurlstoraged</string>
+			<string>nsurlstoraged</string>
+		</array>
+	</dict>
+	<key>com.apple.obliteration</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Erase device via AppleEffacableStorage</string>
+			<string>Erase device via AppleEffacableStorage</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>obliteration</string>
+			<string>obliteration</string>
+		</array>
+	</dict>
+	<key>com.apple.oscard</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>responsible for sensors such as autorotation</string>
+			<string>responsible for sensors such as autorotation</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>oscard</string>
+			<string>oscard</string>
+		</array>
+	</dict>
+	<key>com.apple.parsecd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Siri related process I think</string>
+			<string>Siri related process I think</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>parsecd</string>
+			<string>parsecd</string>
+		</array>
+	</dict>
+	<key>com.apple.passd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Passbook</string>
+			<string>Passbook</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>passd</string>
+			<string>passd</string>
+		</array>
+	</dict>
+	<key>com.apple.pasteboard</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>copy paste</string>
+			<string>copy paste</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pasteboard</string>
+			<string>pasteboard</string>
+		</array>
+	</dict>
+	<key>com.apple.pasteboard.pasted</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Clipboard / Paseboard Services</string>
+			<string>Clipboard / Paseboard Services</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pasted</string>
+			<string>pasted</string>
+		</array>
+	</dict>
+	<key>com.apple.pcapd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Packet Capture</string>
+			<string>Packet Capture</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pcapd</string>
+			<string>pcapd</string>
+		</array>
+	</dict>
+	<key>com.apple.perboardservice v2</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>dont touch PREBOARDSERVICE / First login screen</string>
+			<string>dont touch PREBOARDSERVICE / First login screen</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>perboardservice v2</string>
+			<string>perboardservice v2</string>
+		</array>
+	</dict>
+	<key>com.apple.pfd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Packet Filter</string>
+			<string>Packet Filter</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pfd</string>
+			<string>pfd</string>
+		</array>
+	</dict>
+	<key>com.apple.photoanalysisd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Photo Library</string>
+			<string>Photo Library</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>photoanalysisd</string>
+			<string>photoanalysisd</string>
+		</array>
+	</dict>
+	<key>com.apple.pipelined</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>In computing, a pipeline, also known as a data pipeline,[1] is a set of data processing elements connected in series, where the output of one element is the input of the next one. The elements of a pipeline are often executed in parallel or in time-sliced fashion. Some amount of buffer storage is often inserted between elements.</string>
+			<string>In computing, a pipeline, also known as a data pipeline,[1] is a set of data processing elements connected in series, where the output of one element is the input of the next one. The elements of a pipeline are often executed in parallel or in time-sliced fashion. Some amount of buffer storage is often inserted between elements.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pipelined</string>
+			<string>pipelined</string>
+		</array>
+	</dict>
+	<key>com.apple.pkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>manages plugins in safari launchd</string>
+			<string>manages plugins in safari launchd</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pkd</string>
+			<string>pkd</string>
+		</array>
+	</dict>
+	<key>com.apple.pluginkit</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>pkd -- management and supervision daemon for plug-in services</string>
+			<string>pkd -- management and supervision daemon for plug-in services</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pluginkit</string>
+			<string>pluginkit</string>
+		</array>
+	</dict>
+	<key>com.apple.pluginkit.pkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>PluginKit</string>
+			<string>PluginKit</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pkd</string>
+			<string>pkd</string>
+		</array>
+	</dict>
+	<key>com.apple.powerd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Power management</string>
+			<string>电源管理</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Power</string>
+			<string>电源管理</string>
+		</array>
+	</dict>
+	<key>com.apple.powerloghelperd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>This is used to monitor anyincompatibilities with 3rd party chargers.</string>
+			<string>This is used to monitor anyincompatibilities with 3rd party chargers.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>powerloghelperd</string>
+			<string>powerloghelperd</string>
+		</array>
+	</dict>
+	<key>com.apple.preboardservice</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>First unlock screen</string>
+			<string>First unlock screen</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>preboardservice</string>
+			<string>preboardservice</string>
+		</array>
+	</dict>
+	<key>com.apple.preboardservice_v2</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>?</string>
+			<string>?</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>preboardservice_v2</string>
+			<string>preboardservice_v2</string>
+		</array>
+	</dict>
+	<key>com.apple.printd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Print service</string>
+			<string>打印服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>printd</string>
+			<string>printd</string>
+		</array>
+	</dict>
+	<key>com.apple.progressd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>com.apple.progressdprogressd is the ClassKit sync agent. It handles syncing classes, class members, student handouts and progress data between student and teacher man-aged Apple ID accounts.</string>
+			<string>com.apple.progressdprogressd is the ClassKit sync agent. It handles syncing classes, class members, student handouts and progress data between student and teacher man-aged Apple ID accounts.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>progressd</string>
+			<string>progressd</string>
+		</array>
+	</dict>
+	<key>com.apple.ptpcamerad</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Picture Transfer Protocol</string>
+			<string>Picture Transfer Protocol</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ptpcamerad</string>
+			<string>ptpcamerad</string>
+		</array>
+	</dict>
+	<key>com.apple.ptpd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Picture Transfer Protocol</string>
+			<string>Picture Transfer Protocol</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ptpd</string>
+			<string>ptpd</string>
+		</array>
+	</dict>
+	<key>com.apple.ptp_device_arbitrator</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string></string>
+			<string>打印机设备辅助</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>ptp_device_arbitrator</string>
+			<string>ptp_device_arbitrator</string>
+		</array>
+	</dict>
+	<key>com.apple.purplebuddy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>related to restoration and backup from icloud "try to leave alone"</string>
+			<string>related to restoration and backup from icloud "try to leave alone"</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>purplebuddy</string>
+			<string>purplebuddy</string>
+		</array>
+	</dict>
+	<key>com.apple.quicklook</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Quicklook is the function that offers Finder built-in preview of any selected document in multicolumn Finder, or control-mouse click the file choosing the Quick Look menu, or File menu's Quicklook function. Previews in the Finder's Get Info window do the same thing</string>
+			<string>Quicklook is the function that offers Finder built-in preview of any selected document in multicolumn Finder, or control-mouse click the file choosing the Quick Look menu, or File menu's Quicklook function. Previews in the Finder's Get Info window do the same thing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>quicklook</string>
+			<string>quicklook</string>
+		</array>
+	</dict>
+	<key>com.apple.racoon</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>VPN</string>
+			<string>VPN</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>racoon</string>
+			<string>racoon</string>
+		</array>
+	</dict>
+	<key>com.apple.rapportd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Daemon that enables Phone Call Handoff and other communication features between Apple devices.Use '/usr/libexec/rapportd -V' to get the version.</string>
+			<string>Daemon that enables Phone Call Handoff and other communication features between Apple devices.Use '/usr/libexec/rapportd -V' to get the version.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>rapportd</string>
+			<string>rapportd</string>
+		</array>
+	</dict>
+	<key>com.apple.recentsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Most recently used (MRU) list</string>
+			<string>Most recently used (MRU) list</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>recentsd</string>
+			<string>recentsd</string>
+		</array>
+	</dict>
+	<key>com.apple.remotemanagementd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>remotemanagementd handles HTTP communication with an Mobile Device Management (MDM) Version 2 server, delivering configuration information tothe local Device Management daemon (dmd), and sending status messages back to the server.</string>
+			<string>remotemanagementd handles HTTP communication with an Mobile Device Management (MDM) Version 2 server, delivering configuration information tothe local Device Management daemon (dmd), and sending status messages back to the server.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>remotemanagementd</string>
+			<string>remotemanagementd</string>
+		</array>
+	</dict>
+	<key>com.apple.replayd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Game Kit instant replay</string>
+			<string>Game Kit instant replay</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>replayd</string>
+			<string>replayd</string>
+		</array>
+	</dict>
+	<key>com.apple.reversetemplated</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Create user folder layout from template</string>
+			<string>Create user folder layout from template</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>reversetemplated</string>
+			<string>reversetemplated</string>
+		</array>
+	</dict>
+	<key>com.apple.reversetimplated</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Create user folder layout from template</string>
+			<string>Create user folder layout from template</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>reversetimplated</string>
+			<string>reversetimplated</string>
+		</array>
+	</dict>
+	<key>com.apple.revisiond</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Historical file revision management</string>
+			<string>Historical file revision management</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>revisiond</string>
+			<string>revisiond</string>
+		</array>
+	</dict>
+	<key>com.apple.routined</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>routined is a per-user daemon that learns historical location patterns of a user and predicts future visits to locations</string>
+			<string>routined is a per-user daemon that learns historical location patterns of a user and predicts future visits to locations</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>routined</string>
+			<string>routined</string>
+		</array>
+	</dict>
+	<key>com.apple.rtcreportingd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>looks to be a phone home to verify that your device is authorised for home sharing</string>
+			<string>looks to be a phone home to verify that your device is authorised for home sharing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>rtcreportingd</string>
+			<string>rtcreportingd</string>
+		</array>
+	</dict>
+	<key>com.apple.safarifetcherd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Safari extension retrieves web pages and does a lot of the heavy lifting</string>
+			<string>Safari extension retrieves web pages and does a lot of the heavy lifting</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>safarifetcherd</string>
+			<string>safarifetcherd</string>
+		</array>
+	</dict>
+	<key>com.apple.sandboxd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Sandbox</string>
+			<string>Sandbox</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Sandbox</string>
+			<string>Sandbox</string>
+		</array>
+	</dict>
+	<key>com.apple.screensharigserver</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>AirPlay</string>
+			<string>AirPlay</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>screensharigserver</string>
+			<string>screensharigserver</string>
+		</array>
+	</dict>
+	<key>com.apple.screensharingserver</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>AirPlay</string>
+			<string>AirPlay</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>screensharingserver</string>
+			<string>screensharingserver</string>
+		</array>
+	</dict>
+	<key>com.apple.scrod</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>voice control related</string>
+			<string>voice control related</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>scrod</string>
+			<string>scrod</string>
+		</array>
+	</dict>
+	<key>com.apple.searchd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Spotlight</string>
+			<string>Spotlight</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>searchd</string>
+			<string>searchd</string>
+		</array>
+	</dict>
+	<key>com.apple.securityd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Keychains</string>
+			<string>钥匙串</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>securityd</string>
+			<string>securityd</string>
+		</array>
+	</dict>
+	<key>com.apple.securityuploadd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The securityuploadd daemon collects information about security events from the local system, and uploads them to Apple's Splunk servers in the cloud</string>
+			<string>The securityuploadd daemon collects information about security events from the local system, and uploads them to Apple's Splunk servers in the cloud</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>securityuploadd</string>
+			<string>securityuploadd</string>
+		</array>
+	</dict>
+	<key>com.apple.seserviced</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Secure Element interface</string>
+			<string>Secure Element interface</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>seserviced</string>
+			<string>seserviced</string>
+		</array>
+	</dict>
+	<key>com.apple.sharingd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Generic "Share" action handler</string>
+			<string>Generic "Share" action handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>sharingd</string>
+			<string>sharingd</string>
+		</array>
+	</dict>
+	<key>com.apple.sidecar-relay</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Use iDevice as a screen</string>
+			<string>Use iDevice as a screen</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>sidecar-relay</string>
+			<string>sidecar-relay</string>
+		</array>
+	</dict>
+	<key>com.apple.signpost_reporter</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Signposts is a developer feature created by Apple to help developers diagnose performance problems in applications.</string>
+			<string>Signposts is a developer feature created by Apple to help developers diagnose performance problems in applications.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>signpost_reporter</string>
+			<string>signpost_reporter</string>
+		</array>
+	</dict>
+	<key>com.apple.siriactionsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Siri voice shortcuts</string>
+			<string>Siri voice shortcuts</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>siriactionsd</string>
+			<string>siriactionsd</string>
+		</array>
+	</dict>
+	<key>com.apple.siriknowledged</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Siri related extension</string>
+			<string>Siri related extension</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>siriknowledged</string>
+			<string>siriknowledged</string>
+		</array>
+	</dict>
+	<key>com.apple.softwareupdated</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>update service</string>
+			<string>系统更新服务</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>softwareupdated</string>
+			<string>softwareupdated</string>
+		</array>
+	</dict>
+	<key>com.apple.softwareupdateservicesd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Tells iOS how to start andexecute an OTA update, feel free to remove. Although DO NOT attempt an OTAupdate with this removed. I feel that it also stops the update from happening ifthe device is jailbroken.</string>
+			<string>软件升级</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>softwareupdateservicesd</string>
+			<string>softwareupdateservicesd</string>
+		</array>
+	</dict>
+	<key>com.apple.sosd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Emergency recovery for iCloud Keychain</string>
+			<string>Emergency recovery for iCloud Keychain</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>sosd</string>
+			<string>sosd</string>
+		</array>
+	</dict>
+	<key>com.apple.spindump</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>dumps information log of spinning "stuck" app</string>
+			<string>dumps information log of spinning "stuck" app</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>spindump</string>
+			<string>spindump</string>
+		</array>
+	</dict>
+	<key>com.apple.splashboardd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>makes springboard function</string>
+			<string>makes springboard function</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>splashboardd</string>
+			<string>splashboardd</string>
+		</array>
+	</dict>
+	<key>com.apple.mobile.storage_mounter</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>The iPad Camera Connection Kit depends on this daemon. Delete if you don't use it, or if you don't have an iPad.</string>
+			<string>该进程是苹果在未来设备及固件中开启的新功能，将允许你使用你的iPhone保持在“磁盘模式”</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>storage_mounter</string>
+			<string>storage_mounter</string>
+		</array>
+	</dict>
+	<key>com.apple.storebookkeeperd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Book store keeper</string>
+			<string>书店守护进程</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>storebookkeeperd</string>
+			<string>storebookkeeperd</string>
+		</array>
+	</dict>
+	<key>com.apple.streaming_zip_conduit</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Handle untrusted Zip content out of process</string>
+			<string>Handle untrusted Zip content out of process</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>streaming_zip_conduit</string>
+			<string>streaming_zip_conduit</string>
+		</array>
+	</dict>
+	<key>com.apple.studentd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>studentd manages the Apple Classroom experience for students and teachers that use MDM and the Apple School Manager service.</string>
+			<string>studentd manages the Apple Classroom experience for students and teachers that use MDM and the Apple School Manager service.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>studentd</string>
+			<string>studentd</string>
+		</array>
+	</dict>
+	<key>com.apple.suggestd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>suggestd is daemon that processes user content in order to detect contacts, events, named entities, etc. It receives content from Mail, Spotlight, Messages and other apps.</string>
+			<string>suggestd is daemon that processes user content in order to detect contacts, events, named entities, etc. It receives content from Mail, Spotlight, Messages and other apps.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>suggestd</string>
+			<string>suggestd</string>
+		</array>
+	</dict>
+	<key>com.apple.swcagent</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Shared Web Credentials, uses NSURLSession to fetch the apple-app-site-association file.</string>
+			<string>Shared Web Credentials, uses NSURLSession to fetch the apple-app-site-association file.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>swcagent</string>
+			<string>swcagent</string>
+		</array>
+	</dict>
+	<key>com.apple.swcd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Shared Web Credentials</string>
+			<string>Shared Web Credentials</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>swcd</string>
+			<string>swcd</string>
+		</array>
+	</dict>
+	<key>com.apple.symptomsd helper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>syncdefaultsd</string>
+			<string>syncdefaultsd</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>symptomsd helper</string>
+			<string>symptomsd helper</string>
+		</array>
+	</dict>
+	<key>com.apple.synctodefaultsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>most likely related to icloud sync</string>
+			<string>most likely related to icloud sync</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>synctodefaultsd</string>
+			<string>synctodefaultsd</string>
+		</array>
+	</dict>
+	<key>com.apple.sysdiagnose</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DEBUGGING</string>
+			<string>DEBUGGING</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>sysdiagnose</string>
+			<string>sysdiagnose</string>
+		</array>
+	</dict>
+	<key>com.apple.sysdiagnose_helper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DEBUGGING</string>
+			<string>DEBUGGING</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>sysdiagnose_helper</string>
+			<string>sysdiagnose_helper</string>
+		</array>
+	</dict>
+	<key>com.apple.syslogd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Logs system events</string>
+			<string>系统日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>syslogd</string>
+			<string>syslogd</string>
+		</array>
+	</dict>
+	<key>com.apple.syslog_relay</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Logs system events</string>
+			<string>系统日志</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>syslog_relay</string>
+			<string>syslog_relay</string>
+		</array>
+	</dict>
+	<key>com.apple.systemstats</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DEBUGGING systemstatsd is a "daemon" type process that generates data that the systemstats program can print out. It normally only runs when the systemstats program is actually run, which is only done manually from the Terminal as far as I know. It prints out a bunch of data that might be worth knowing. From a Terminal window you can</string>
+			<string>DEBUGGING systemstatsd is a "daemon" type process that generates data that the systemstats program can print out. It normally only runs when the systemstats program is actually run, which is only done manually from the Terminal as far as I know. It prints out a bunch of data that might be worth knowing. From a Terminal window you can</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>systemstats</string>
+			<string>systemstats</string>
+		</array>
+	</dict>
+	<key>com.apple.tailspind</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>DEBUGGING An application asks tailspind and spindump to take a snapshot of the state of that application and write it out to disk, or;Some application or process would consume maximum CPU for some period of time (30 seconds seems to be the general consensus), and then tailspind and spindump would fire up to take a snapshot of what was going on for future debugging purposes.</string>
+			<string>DEBUGGING An application asks tailspind and spindump to take a snapshot of the state of that application and write it out to disk, or;Some application or process would consume maximum CPU for some period of time (30 seconds seems to be the general consensus), and then tailspind and spindump would fire up to take a snapshot of what was going on for future debugging purposes.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>tailspind</string>
+			<string>tailspind</string>
+		</array>
+	</dict>
+	<key>com.apple.tccd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Total and Complete Control - App privacy settings</string>
+			<string>隐私访问</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>tccd</string>
+			<string>tccd</string>
+		</array>
+	</dict>
+	<key>com.apple.telephonyutilites</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>telephony utilities</string>
+			<string>telephony utilities</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>telephonyutilites</string>
+			<string>telephonyutilites</string>
+		</array>
+	</dict>
+	<key>com.apple.terminusd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>On-demand VPN</string>
+			<string>On-demand VPN</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>terminusd</string>
+			<string>terminusd</string>
+		</array>
+	</dict>
+	<key>com.apple.timed</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>NTP Client</string>
+			<string>系统时间</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>timed</string>
+			<string>timed</string>
+		</array>
+	</dict>
+	<key>com.apple.timerd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>timer function in clock app</string>
+			<string>timer function in clock app</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>timerd</string>
+			<string>timerd</string>
+		</array>
+	</dict>
+	<key>com.apple.timezoneupdates</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>TimezoneUpdates</string>
+			<string>TimezoneUpdates</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>timezoneupdates</string>
+			<string>timezoneupdates</string>
+		</array>
+	</dict>
+	<key>com.apple.tipsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Tip of the day</string>
+			<string>Tip of the day</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>tipsd</string>
+			<string>tipsd</string>
+		</array>
+	</dict>
+	<key>com.apple.tonelibraryd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Ringtone library access</string>
+			<string>Ringtone library access</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>tonelibraryd</string>
+			<string>tonelibraryd</string>
+		</array>
+	</dict>
+	<key>com.apple.touchsetupd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Touch Accommodations to fit your specific fine-motor skills needs. It's recommended that you configure your preferences</string>
+			<string>Touch Accommodations to fit your specific fine-motor skills needs. It's recommended that you configure your preferences</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>touchsetupd</string>
+			<string>touchsetupd</string>
+		</array>
+	</dict>
+	<key>com.apple.triald</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple A/B testing</string>
+			<string>Apple A/B testing</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>triald</string>
+			<string>triald</string>
+		</array>
+	</dict>
+	<key>com.apple.trustd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>PKI trust evaluation</string>
+			<string>PKI trust evaluation</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>trustd</string>
+			<string>trustd</string>
+		</array>
+	</dict>
+	<key>com.apple.tvremoted</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Apple TV remote app</string>
+			<string>Apple TV remote app</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>tvremoted</string>
+			<string>tvremoted</string>
+		</array>
+	</dict>
+	<key>com.apple.twitter.xpc</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Twitter account handler</string>
+			<string>Twitter account handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>xpc</string>
+			<string>xpc</string>
+		</array>
+	</dict>
+	<key>com.apple.tzlinkd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Time Zones</string>
+			<string>时区</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>tzlinkd</string>
+			<string>tzlinkd</string>
+		</array>
+	</dict>
+	<key>com.apple.UIKit.pasteboardd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Pasteboard</string>
+			<string>系统剪贴板</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>pasteboardd</string>
+			<string>pasteboardd</string>
+		</array>
+	</dict>
+	<key>com.apple.usb-networking-addnetwork</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>usb/lightning to ethernet i think</string>
+			<string>usb/lightning to ethernet i think</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>usb-networking-addnetwork</string>
+			<string>usb-networking-addnetwork</string>
+		</array>
+	</dict>
+	<key>com.apple.userfs_helper</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>user fileystem helper</string>
+			<string>user fileystem helper</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>userfs_helper</string>
+			<string>userfs_helper</string>
+		</array>
+	</dict>
+	<key>com.apple.userfsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>user filesystem</string>
+			<string>user filesystem</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>userfsd</string>
+			<string>userfsd</string>
+		</array>
+	</dict>
+	<key>com.apple.videosubscriptionsd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>/usr/libexec/videosubscriptionsd (more correctly id’ed as com.apple.VideoSubscriberAccount.videosubscriptionsd) is part of the single sign-on video subscription services that Apple introduced into OSX/tvOS/iOS. Its part of the Video Subscriber Account framework (VideoSubscriberAccount.framework) and specifically relates to authenticating for video streaming/playback.</string>
+			<string>/usr/libexec/videosubscriptionsd (more correctly id’ed as com.apple.VideoSubscriberAccount.videosubscriptionsd) is part of the single sign-on video subscription services that Apple introduced into OSX/tvOS/iOS. Its part of the Video Subscriber Account framework (VideoSubscriberAccount.framework) and specifically relates to authenticating for video streaming/playback.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>videosubscriptionsd</string>
+			<string>videosubscriptionsd</string>
+		</array>
+	</dict>
+	<key>com.apple.vibrationmanagerd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Vibration management</string>
+			<string>震动设置</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>vibrationmanagerd</string>
+			<string>vibrationmanagerd</string>
+		</array>
+	</dict>
+	<key>com.apple.voiced</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Deals with voice control</string>
+			<string>语音控制</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>voiced</string>
+			<string>voiced</string>
+		</array>
+	</dict>
+	<key>com.apple.voicememod</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Voice Memos</string>
+			<string>Voice Memos</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>voicememod</string>
+			<string>voicememod</string>
+		</array>
+	</dict>
+	<key>com.apple.voicemod</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Deals with voice control "I think"</string>
+			<string>Deals with voice control "I think"</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>voicemod</string>
+			<string>voicemod</string>
+		</array>
+	</dict>
+	<key>com.apple.wapic</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Deals with errors with Wifi networks with Chinese characters in the name /can prob be deleted</string>
+			<string>Deals with errors with Wifi networks with Chinese characters in the name /can prob be deleted</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>wapic</string>
+			<string>wapic</string>
+		</array>
+	</dict>
+	<key>com.apple.watchlistd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>dunno leave on</string>
+			<string>dunno leave on</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>watchlistd</string>
+			<string>watchlistd</string>
+		</array>
+	</dict>
+	<key>com.apple.webinspectord</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>webinspectord is the service in charge of all operations related to the use of the ‘Web Inspector’ on iOS. It runs an XPC service known as // webinspectord relays commands between Web Inspector and targets that it can remotely inspect, such as WKWebView and JSContext instances.</string>
+			<string>webinspectord is the service in charge of all operations related to the use of the ‘Web Inspector’ on iOS. It runs an XPC service known as // webinspectord relays commands between Web Inspector and targets that it can remotely inspect, such as WKWebView and JSContext instances.</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>webinspectord</string>
+			<string>webinspectord</string>
+		</array>
+	</dict>
+	<key>com.apple.webio.xpc</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Webio account handler</string>
+			<string>Webio account handler</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>xpc</string>
+			<string>xpc</string>
+		</array>
+	</dict>
+	<key>com.apple.wifi.hostapd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Host Access Point - Instant Hotspot</string>
+			<string>Host Access Point - Instant Hotspot</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>hostapd</string>
+			<string>hostapd</string>
+		</array>
+	</dict>
+	<key>com.apple.wifiFirmwareLoader</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Move the firmware from disk to the WiFi chip</string>
+			<string>Move the firmware from disk to the WiFi chip</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>wifiFirmwareLoader</string>
+			<string>wifiFirmwareLoader</string>
+		</array>
+	</dict>
+	<key>com.apple.wifid</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>WiFi</string>
+			<string>WiFi</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>wifid</string>
+			<string>wifid</string>
+		</array>
+	</dict>
+	<key>com.apple.wififirmwareloaderlegacy</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>firmwarefile for wifi</string>
+			<string>firmwarefile for wifi</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>wififirmwareloaderlegacy</string>
+			<string>wififirmwareloaderlegacy</string>
+		</array>
+	</dict>
+	<key>com.apple.wifip2pd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>WiFi peer-to-peer</string>
+			<string>WiFi peer-to-peer</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>wifip2pd</string>
+			<string>wifip2pd</string>
+		</array>
+	</dict>
+	<key>com.apple.wirelessproxd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Wifi</string>
+			<string>Wifi</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>wirelessproxd</string>
+			<string>wirelessproxd</string>
+		</array>
+	</dict>
+	<key>com.apple.xpcd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>XPC</string>
+			<string>XPC</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>xpcd</string>
+			<string>xpcd</string>
+		</array>
+	</dict>
+	<key>com.openssh.sshd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>OpenSSH for remote login</string>
+			<string>OpenSSH远程登录</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>OpenSSH</string>
+			<string>OpenSSH</string>
+		</array>
+	</dict>
+	<key>com.rpetrich.rocketbootstrapd</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Rocketbootstrap for IPC</string>
+			<string>Rocketbootstrap服务,用于IPC通信</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Rocketbootstrap</string>
+			<string>Rocketbootstrap</string>
+		</array>
+	</dict>
+	<key>com.saurik.Cydia.Startup</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Cydia</string>
+			<string>Cydia</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Cydia</string>
+			<string>Cydia</string>
+		</array>
+	</dict>
+	<key>com.saurik.substrated</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Substrate for hook</string>
+			<string>Substrate Hook框架</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Substrate</string>
+			<string>Substrate</string>
+		</array>
+	</dict>
+	<key>re.frida.server</key>
+	<dict>
+		<key>detail</key>
+		<array>
+			<string>Frida for instrument</string>
+			<string>Frida跟踪框架</string>
+		</array>
+		<key>simple</key>
+		<array>
+			<string>Frida</string>
+			<string>Frida</string>
+		</array>
+	</dict>
+</dict>
+</plist>
